@@ -1,10 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.bugstack.infrastructure.dao.IGroupBuyDiscountDao">
 
-</body>
-</html>
+
+    <select id="queryGroupBuyDiscountList" resultType="cn.bugstack.infrastructure.dao.po.GroupBuyDiscount">
+        select * from group_buy_discount
+    </select>
+</mapper>
