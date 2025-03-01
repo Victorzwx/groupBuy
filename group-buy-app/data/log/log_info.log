@@ -1,146 +1,207 @@
-25-02-28.23:27:57.811 [main            ] INFO  GroupBuyActivityTest   - Starting GroupBuyActivityTest using Java 1.8.0_411 on LAPTOP-T2LJDCAR with PID 3268 (started by zwx in C:\Users\zwx\Desktop\KnowledgePlanet\group-buy\group-buy-app)
-25-02-28.23:27:57.812 [main            ] INFO  GroupBuyActivityTest   - The following 1 profile is active: "dev"
-25-02-28.23:28:00.969 [main            ] INFO  GroupBuyActivityTest   - Started GroupBuyActivityTest in 3.687 seconds (JVM running for 4.975)
-25-02-28.23:28:01.279 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-25-02-28.23:28:03.298 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-25-02-28.23:28:03.633 [main            ] INFO  GroupBuyActivityTest   - 测试结果:[{"activityId":100123,"activityName":"测试活动","channel":"c01","createTime":1733537980000,"discountId":"25120207","endTime":1733537980000,"goodsId":"9890001","groupType":0,"id":1,"source":"s01","startTime":1733537980000,"status":0,"tagId":"1","tagScope":"1","takeLimitCount":1,"target":1,"updateTime":1733543247000,"validTime":15}]
-25-02-28.23:28:03.647 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-25-02-28.23:28:03.849 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-25-02-28.23:28:16.337 [main            ] INFO  GroupBuyDiscountDaoTest - Starting GroupBuyDiscountDaoTest using Java 1.8.0_411 on LAPTOP-T2LJDCAR with PID 9576 (started by zwx in C:\Users\zwx\Desktop\KnowledgePlanet\group-buy\group-buy-app)
-25-02-28.23:28:16.339 [main            ] INFO  GroupBuyDiscountDaoTest - The following 1 profile is active: "dev"
-25-02-28.23:28:19.523 [main            ] INFO  GroupBuyDiscountDaoTest - Started GroupBuyDiscountDaoTest in 3.727 seconds (JVM running for 4.946)
-25-02-28.23:28:19.778 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-25-02-28.23:28:21.732 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-25-02-28.23:28:22.037 [main            ] INFO  GroupBuyDiscountDaoTest - 测试结果:[{"createTime":1733538015000,"discountDesc":"测试优惠","discountId":25120207,"discountName":"测试优惠","discountType":0,"id":1,"marketExpr":"20","marketPlan":"ZJ","updateTime":1734750812000}]
-25-02-28.23:28:22.042 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-25-02-28.23:28:22.272 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-25-02-28.23:28:59.109 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Starting IIndexGroupBuyMarketServiceTest using Java 1.8.0_411 on LAPTOP-T2LJDCAR with PID 10816 (started by zwx in C:\Users\zwx\Desktop\KnowledgePlanet\group-buy\group-buy-app)
-25-02-28.23:28:59.110 [main            ] INFO  IIndexGroupBuyMarketServiceTest - The following 1 profile is active: "dev"
-25-02-28.23:29:02.115 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Started IIndexGroupBuyMarketServiceTest in 3.535 seconds (JVM running for 4.717)
-25-02-28.23:29:02.556 [main            ] INFO  RootNode               - 拼团商品查询试算服务-RootNode userId:xiaofuge requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
-25-02-28.23:29:02.602 [pool-2-thread-2 ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-25-02-28.23:29:04.450 [pool-2-thread-2 ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-25-02-28.23:29:04.626 [main            ] INFO  MarketNode             - 拼团商品查询试算服务-MarketNode userId:xiaofuge 异步线程加载数据「GroupBuyActivityDiscountVO、SkuVO」完成
-25-02-28.23:29:04.626 [main            ] INFO  MarketNode             - 拼团商品查询试算服务-MarketNode userId:xiaofuge requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
-25-02-28.23:29:04.626 [main            ] INFO  EndNode                - 拼团商品查询试算服务-EndNode userId:xiaofuge requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
-25-02-28.23:29:04.628 [main            ] INFO  IIndexGroupBuyMarketServiceTest - 请求参数:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
-25-02-28.23:29:04.636 [main            ] INFO  IIndexGroupBuyMarketServiceTest - 返回结果:{"deductionPrice":0.00,"endTime":1733537980000,"goodsId":"9890001","goodsName":"《手写MyBatis：渐进式源码实践》","isEnable":false,"isVisible":false,"originalPrice":100.00,"startTime":1733537980000,"targetCount":1}
-25-02-28.23:29:04.647 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-25-02-28.23:29:04.895 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-25-02-28.23:29:29.652 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Starting IIndexGroupBuyMarketServiceTest using Java 1.8.0_411 on LAPTOP-T2LJDCAR with PID 19348 (started by zwx in C:\Users\zwx\Desktop\KnowledgePlanet\group-buy\group-buy-app)
-25-02-28.23:29:29.653 [main            ] INFO  IIndexGroupBuyMarketServiceTest - The following 1 profile is active: "dev"
-25-02-28.23:29:33.050 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Started IIndexGroupBuyMarketServiceTest in 3.966 seconds (JVM running for 5.653)
-25-02-28.23:34:32.717 [main            ] INFO  RootNode               - 拼团商品查询试算服务-RootNode userId:xiaofuge requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
-25-02-28.23:34:59.171 [pool-2-thread-2 ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-25-02-28.23:35:00.932 [pool-2-thread-2 ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-25-02-28.23:35:01.127 [main            ] INFO  MarketNode             - 拼团商品查询试算服务-MarketNode userId:xiaofuge 异步线程加载数据「GroupBuyActivityDiscountVO、SkuVO」完成
-25-02-28.23:35:01.128 [main            ] INFO  MarketNode             - 拼团商品查询试算服务-MarketNode userId:xiaofuge requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
-25-02-28.23:35:01.128 [main            ] INFO  EndNode                - 拼团商品查询试算服务-EndNode userId:xiaofuge requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
-25-02-28.23:35:30.156 [main            ] INFO  IIndexGroupBuyMarketServiceTest - 请求参数:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
-25-02-28.23:35:30.512 [main            ] INFO  IIndexGroupBuyMarketServiceTest - 返回结果:{"deductionPrice":0.00,"endTime":1733537980000,"goodsId":"9890001","goodsName":"《手写MyBatis：渐进式源码实践》","isEnable":false,"isVisible":false,"originalPrice":100.00,"startTime":1733537980000,"targetCount":1}
-25-02-28.23:35:33.112 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-25-02-28.23:35:33.259 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-25-02-28.23:37:31.925 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Starting IIndexGroupBuyMarketServiceTest using Java 1.8.0_411 on LAPTOP-T2LJDCAR with PID 4564 (started by zwx in C:\Users\zwx\Desktop\KnowledgePlanet\group-buy\group-buy-app)
-25-02-28.23:37:31.926 [main            ] INFO  IIndexGroupBuyMarketServiceTest - The following 1 profile is active: "dev"
-25-02-28.23:37:35.398 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Started IIndexGroupBuyMarketServiceTest in 4.064 seconds (JVM running for 5.489)
-25-02-28.23:38:33.087 [main            ] INFO  RootNode               - 拼团商品查询试算服务-RootNode userId:xiaofuge requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
-25-02-28.23:42:35.937 [pool-2-thread-2 ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-25-02-28.23:42:37.768 [pool-2-thread-2 ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-25-02-28.23:42:44.333 [main            ] INFO  MarketNode             - 拼团商品查询试算服务-MarketNode userId:xiaofuge 异步线程加载数据「GroupBuyActivityDiscountVO、SkuVO」完成
-25-02-28.23:42:54.132 [main            ] INFO  MarketNode             - 拼团商品查询试算服务-MarketNode userId:xiaofuge requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
-25-02-28.23:43:10.362 [main            ] INFO  EndNode                - 拼团商品查询试算服务-EndNode userId:xiaofuge requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
-25-02-28.23:45:32.819 [main            ] INFO  IIndexGroupBuyMarketServiceTest - 请求参数:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
-25-02-28.23:45:33.030 [main            ] INFO  IIndexGroupBuyMarketServiceTest - 返回结果:{"deductionPrice":0.00,"endTime":1733537980000,"goodsId":"9890001","goodsName":"《手写MyBatis：渐进式源码实践》","isEnable":false,"isVisible":false,"originalPrice":100.00,"startTime":1733537980000,"targetCount":1}
-25-02-28.23:45:37.485 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-25-02-28.23:45:37.936 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-25-02-28.23:45:59.870 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Starting IIndexGroupBuyMarketServiceTest using Java 1.8.0_411 on LAPTOP-T2LJDCAR with PID 18600 (started by zwx in C:\Users\zwx\Desktop\KnowledgePlanet\group-buy\group-buy-app)
-25-02-28.23:45:59.872 [main            ] INFO  IIndexGroupBuyMarketServiceTest - The following 1 profile is active: "dev"
-25-02-28.23:46:03.098 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Started IIndexGroupBuyMarketServiceTest in 3.762 seconds (JVM running for 4.954)
-25-02-28.23:46:03.778 [main            ] INFO  RootNode               - 拼团商品查询试算服务-RootNode userId:xiaofuge requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
-25-02-28.23:46:03.833 [pool-2-thread-2 ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-25-02-28.23:46:05.677 [pool-2-thread-2 ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-25-02-28.23:46:05.846 [main            ] INFO  MarketNode             - 拼团商品查询试算服务-MarketNode userId:xiaofuge 异步线程加载数据「GroupBuyActivityDiscountVO、SkuVO」完成
-25-02-28.23:46:05.846 [main            ] INFO  MarketNode             - 拼团商品查询试算服务-MarketNode userId:xiaofuge requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
-25-02-28.23:46:05.846 [main            ] INFO  EndNode                - 拼团商品查询试算服务-EndNode userId:xiaofuge requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
-25-02-28.23:46:05.848 [main            ] INFO  IIndexGroupBuyMarketServiceTest - 请求参数:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
-25-02-28.23:46:05.857 [main            ] INFO  IIndexGroupBuyMarketServiceTest - 返回结果:{"deductionPrice":0.00,"endTime":1733537980000,"goodsId":"9890001","goodsName":"《手写MyBatis：渐进式源码实践》","isEnable":false,"isVisible":false,"originalPrice":100.00,"startTime":1733537980000,"targetCount":1}
-25-02-28.23:46:05.873 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-25-02-28.23:46:06.138 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-25-02-28.23:46:11.360 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Starting IIndexGroupBuyMarketServiceTest using Java 1.8.0_411 on LAPTOP-T2LJDCAR with PID 18816 (started by zwx in C:\Users\zwx\Desktop\KnowledgePlanet\group-buy\group-buy-app)
-25-02-28.23:46:11.361 [main            ] INFO  IIndexGroupBuyMarketServiceTest - The following 1 profile is active: "dev"
-25-02-28.23:46:14.813 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Started IIndexGroupBuyMarketServiceTest in 4.037 seconds (JVM running for 5.376)
-25-02-28.23:46:22.565 [main            ] INFO  RootNode               - 拼团商品查询试算服务-RootNode userId:xiaofuge requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
-25-02-28.23:46:37.628 [pool-2-thread-2 ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-25-02-28.23:46:39.587 [pool-2-thread-2 ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-25-02-28.23:46:39.762 [main            ] INFO  MarketNode             - 拼团商品查询试算服务-MarketNode userId:xiaofuge 异步线程加载数据「GroupBuyActivityDiscountVO、SkuVO」完成
-25-02-28.23:46:45.367 [main            ] INFO  MarketNode             - 拼团商品查询试算服务-MarketNode userId:xiaofuge requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
-25-02-28.23:46:45.367 [main            ] INFO  EndNode                - 拼团商品查询试算服务-EndNode userId:xiaofuge requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
-25-02-28.23:46:45.369 [main            ] INFO  IIndexGroupBuyMarketServiceTest - 请求参数:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
-25-02-28.23:46:45.378 [main            ] INFO  IIndexGroupBuyMarketServiceTest - 返回结果:{"deductionPrice":0.00,"endTime":1733537980000,"goodsId":"9890001","goodsName":"《手写MyBatis：渐进式源码实践》","isEnable":false,"isVisible":false,"originalPrice":100.00,"startTime":1733537980000,"targetCount":1}
-25-02-28.23:46:45.390 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-25-02-28.23:46:45.604 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-25-02-28.23:47:03.018 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Starting IIndexGroupBuyMarketServiceTest using Java 1.8.0_411 on LAPTOP-T2LJDCAR with PID 14960 (started by zwx in C:\Users\zwx\Desktop\KnowledgePlanet\group-buy\group-buy-app)
-25-02-28.23:47:03.020 [main            ] INFO  IIndexGroupBuyMarketServiceTest - The following 1 profile is active: "dev"
-25-02-28.23:47:06.545 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Started IIndexGroupBuyMarketServiceTest in 4.149 seconds (JVM running for 5.561)
-25-02-28.23:47:07.024 [main            ] INFO  RootNode               - 拼团商品查询试算服务-RootNode userId:xiaofuge requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
-25-02-28.23:48:11.891 [pool-2-thread-2 ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-25-02-28.23:48:13.720 [pool-2-thread-2 ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-25-02-28.23:48:13.934 [main            ] INFO  MarketNode             - 拼团商品查询试算服务-MarketNode userId:xiaofuge 异步线程加载数据「GroupBuyActivityDiscountVO、SkuVO」完成
-25-02-28.23:48:13.935 [main            ] INFO  MarketNode             - 拼团商品查询试算服务-MarketNode userId:xiaofuge requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
-25-02-28.23:48:13.935 [main            ] INFO  EndNode                - 拼团商品查询试算服务-EndNode userId:xiaofuge requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
-25-02-28.23:48:13.937 [main            ] INFO  IIndexGroupBuyMarketServiceTest - 请求参数:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
-25-02-28.23:48:13.945 [main            ] INFO  IIndexGroupBuyMarketServiceTest - 返回结果:{"deductionPrice":0.00,"endTime":1733537980000,"goodsId":"9890001","goodsName":"《手写MyBatis：渐进式源码实践》","isEnable":false,"isVisible":false,"originalPrice":100.00,"startTime":1733537980000,"targetCount":1}
-25-02-28.23:48:13.966 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-25-02-28.23:48:14.201 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-25-02-28.23:48:19.207 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Starting IIndexGroupBuyMarketServiceTest using Java 1.8.0_411 on LAPTOP-T2LJDCAR with PID 14120 (started by zwx in C:\Users\zwx\Desktop\KnowledgePlanet\group-buy\group-buy-app)
-25-02-28.23:48:19.208 [main            ] INFO  IIndexGroupBuyMarketServiceTest - The following 1 profile is active: "dev"
-25-02-28.23:48:22.648 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Started IIndexGroupBuyMarketServiceTest in 4.025 seconds (JVM running for 5.345)
-25-02-28.23:48:23.213 [main            ] INFO  RootNode               - 拼团商品查询试算服务-RootNode userId:xiaofuge requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
-25-02-28.23:48:36.067 [pool-2-thread-1 ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-25-02-28.23:48:37.994 [pool-2-thread-1 ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-25-02-28.23:48:38.182 [main            ] INFO  MarketNode             - 拼团商品查询试算服务-MarketNode userId:xiaofuge 异步线程加载数据「GroupBuyActivityDiscountVO、SkuVO」完成
-25-02-28.23:48:38.183 [main            ] INFO  MarketNode             - 拼团商品查询试算服务-MarketNode userId:xiaofuge requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
-25-02-28.23:48:38.183 [main            ] INFO  EndNode                - 拼团商品查询试算服务-EndNode userId:xiaofuge requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
-25-02-28.23:48:38.184 [main            ] INFO  IIndexGroupBuyMarketServiceTest - 请求参数:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
-25-02-28.23:48:38.192 [main            ] INFO  IIndexGroupBuyMarketServiceTest - 返回结果:{"deductionPrice":0.00,"endTime":1733537980000,"goodsId":"9890001","goodsName":"《手写MyBatis：渐进式源码实践》","isEnable":false,"isVisible":false,"originalPrice":100.00,"startTime":1733537980000,"targetCount":1}
-25-02-28.23:48:38.207 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-25-02-28.23:48:38.396 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-25-02-28.23:48:53.008 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Starting IIndexGroupBuyMarketServiceTest using Java 1.8.0_411 on LAPTOP-T2LJDCAR with PID 18468 (started by zwx in C:\Users\zwx\Desktop\KnowledgePlanet\group-buy\group-buy-app)
-25-02-28.23:48:53.009 [main            ] INFO  IIndexGroupBuyMarketServiceTest - The following 1 profile is active: "dev"
-25-02-28.23:48:56.502 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Started IIndexGroupBuyMarketServiceTest in 4.074 seconds (JVM running for 5.382)
-25-02-28.23:48:56.994 [main            ] INFO  RootNode               - 拼团商品查询试算服务-RootNode userId:xiaofuge requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
-25-02-28.23:49:02.517 [pool-2-thread-2 ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-25-02-28.23:49:04.490 [pool-2-thread-2 ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-25-02-28.23:49:04.705 [main            ] INFO  MarketNode             - 拼团商品查询试算服务-MarketNode userId:xiaofuge 异步线程加载数据「GroupBuyActivityDiscountVO、SkuVO」完成
-25-02-28.23:49:04.705 [main            ] INFO  MarketNode             - 拼团商品查询试算服务-MarketNode userId:xiaofuge requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
-25-02-28.23:49:04.705 [main            ] INFO  EndNode                - 拼团商品查询试算服务-EndNode userId:xiaofuge requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
-25-02-28.23:49:04.707 [main            ] INFO  IIndexGroupBuyMarketServiceTest - 请求参数:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
-25-02-28.23:49:04.715 [main            ] INFO  IIndexGroupBuyMarketServiceTest - 返回结果:{"deductionPrice":0.00,"endTime":1733537980000,"goodsId":"9890001","goodsName":"《手写MyBatis：渐进式源码实践》","isEnable":false,"isVisible":false,"originalPrice":100.00,"startTime":1733537980000,"targetCount":1}
-25-02-28.23:49:04.728 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-25-02-28.23:49:04.941 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-25-02-28.23:49:12.030 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Starting IIndexGroupBuyMarketServiceTest using Java 1.8.0_411 on LAPTOP-T2LJDCAR with PID 18160 (started by zwx in C:\Users\zwx\Desktop\KnowledgePlanet\group-buy\group-buy-app)
-25-02-28.23:49:12.031 [main            ] INFO  IIndexGroupBuyMarketServiceTest - The following 1 profile is active: "dev"
-25-02-28.23:49:15.526 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Started IIndexGroupBuyMarketServiceTest in 4.165 seconds (JVM running for 5.62)
-25-02-28.23:49:16.029 [main            ] INFO  RootNode               - 拼团商品查询试算服务-RootNode userId:xiaofuge requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
-25-02-28.23:49:16.078 [pool-2-thread-2 ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-25-02-28.23:49:18.004 [pool-2-thread-2 ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-25-02-28.23:49:18.196 [main            ] INFO  MarketNode             - 拼团商品查询试算服务-MarketNode userId:xiaofuge 异步线程加载数据「GroupBuyActivityDiscountVO、SkuVO」完成
-25-02-28.23:49:28.787 [main            ] INFO  MarketNode             - 拼团商品查询试算服务-MarketNode userId:xiaofuge requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
-25-02-28.23:49:28.787 [main            ] INFO  EndNode                - 拼团商品查询试算服务-EndNode userId:xiaofuge requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
-25-02-28.23:50:29.059 [main            ] INFO  IIndexGroupBuyMarketServiceTest - 请求参数:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
-25-02-28.23:50:29.068 [main            ] INFO  IIndexGroupBuyMarketServiceTest - 返回结果:{"deductionPrice":0.00,"endTime":1733537980000,"goodsId":"9890001","goodsName":"《手写MyBatis：渐进式源码实践》","isEnable":false,"isVisible":false,"originalPrice":100.00,"startTime":1733537980000,"targetCount":1}
-25-02-28.23:50:29.081 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-25-02-28.23:50:29.436 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-25-02-28.23:50:32.905 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Starting IIndexGroupBuyMarketServiceTest using Java 1.8.0_411 on LAPTOP-T2LJDCAR with PID 19172 (started by zwx in C:\Users\zwx\Desktop\KnowledgePlanet\group-buy\group-buy-app)
-25-02-28.23:50:32.906 [main            ] INFO  IIndexGroupBuyMarketServiceTest - The following 1 profile is active: "dev"
-25-02-28.23:50:36.194 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Started IIndexGroupBuyMarketServiceTest in 3.874 seconds (JVM running for 5.14)
-25-02-28.23:50:36.700 [main            ] INFO  RootNode               - 拼团商品查询试算服务-RootNode userId:xiaofuge requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
-25-02-28.23:50:36.748 [pool-2-thread-1 ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-25-02-28.23:50:38.592 [pool-2-thread-1 ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-25-02-28.23:50:38.769 [main            ] INFO  MarketNode             - 拼团商品查询试算服务-MarketNode userId:xiaofuge 异步线程加载数据「GroupBuyActivityDiscountVO、SkuVO」完成
-25-02-28.23:51:07.793 [main            ] INFO  MarketNode             - 拼团商品查询试算服务-MarketNode userId:xiaofuge requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
-25-02-28.23:51:07.795 [main            ] INFO  EndNode                - 拼团商品查询试算服务-EndNode userId:xiaofuge requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
-25-02-28.23:51:07.797 [main            ] INFO  IIndexGroupBuyMarketServiceTest - 请求参数:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
-25-02-28.23:51:07.803 [main            ] INFO  IIndexGroupBuyMarketServiceTest - 返回结果:{"deductionPrice":0.00,"endTime":1733537980000,"goodsId":"9890001","goodsName":"《手写MyBatis：渐进式源码实践》","isEnable":false,"isVisible":false,"originalPrice":100.00,"startTime":1733537980000,"targetCount":1}
-25-02-28.23:51:07.817 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-25-02-28.23:51:08.034 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-03-01.13:26:33.312 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Starting IIndexGroupBuyMarketServiceTest using Java 1.8.0_411 on LAPTOP-T2LJDCAR with PID 7740 (started by zwx in C:\Users\zwx\Desktop\KnowledgePlanet\group-buy\group-buy-app)
+25-03-01.13:26:33.313 [main            ] INFO  IIndexGroupBuyMarketServiceTest - The following 1 profile is active: "dev"
+25-03-01.13:26:36.591 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Started IIndexGroupBuyMarketServiceTest in 3.764 seconds (JVM running for 4.894)
+25-03-01.13:26:37.059 [main            ] INFO  RootNode               - 拼团商品查询试算服务-RootNode userId:xiaofuge requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
+25-03-01.13:26:37.105 [pool-2-thread-2 ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-03-01.13:26:38.963 [pool-2-thread-2 ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-03-01.13:26:39.124 [main            ] INFO  MarketNode             - 拼团商品查询试算服务-MarketNode userId:xiaofuge 异步线程加载数据「GroupBuyActivityDiscountVO、SkuVO」完成
+25-03-01.13:26:39.124 [main            ] INFO  MarketNode             - 拼团商品查询试算服务-MarketNode userId:xiaofuge requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
+25-03-01.13:26:39.125 [main            ] INFO  ZJCalculateService     - 优惠策略折扣计算:0
+25-03-01.13:26:39.125 [main            ] INFO  EndNode                - 拼团商品查询试算服务-EndNode userId:xiaofuge requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
+25-03-01.13:26:39.127 [main            ] INFO  IIndexGroupBuyMarketServiceTest - 请求参数:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
+25-03-01.13:26:39.134 [main            ] INFO  IIndexGroupBuyMarketServiceTest - 返回结果:{"deductionPrice":0.00,"endTime":1733537980000,"goodsId":"9890001","goodsName":"《手写MyBatis：渐进式源码实践》","isEnable":false,"isVisible":false,"originalPrice":100.00,"startTime":1733537980000,"targetCount":1}
+25-03-01.13:26:39.146 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-03-01.13:26:39.443 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-03-01.13:27:32.912 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Starting IIndexGroupBuyMarketServiceTest using Java 1.8.0_411 on LAPTOP-T2LJDCAR with PID 8668 (started by zwx in C:\Users\zwx\Desktop\KnowledgePlanet\group-buy\group-buy-app)
+25-03-01.13:27:32.913 [main            ] INFO  IIndexGroupBuyMarketServiceTest - The following 1 profile is active: "dev"
+25-03-01.13:27:36.428 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Started IIndexGroupBuyMarketServiceTest in 4.117 seconds (JVM running for 5.694)
+25-03-01.13:29:53.042 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Starting IIndexGroupBuyMarketServiceTest using Java 1.8.0_411 on LAPTOP-T2LJDCAR with PID 1340 (started by zwx in C:\Users\zwx\Desktop\KnowledgePlanet\group-buy\group-buy-app)
+25-03-01.13:29:53.042 [main            ] INFO  IIndexGroupBuyMarketServiceTest - The following 1 profile is active: "dev"
+25-03-01.13:29:56.093 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Started IIndexGroupBuyMarketServiceTest in 3.564 seconds (JVM running for 4.9)
+25-03-01.13:29:56.548 [main            ] INFO  RootNode               - 拼团商品查询试算服务-RootNode userId:xiaofuge requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
+25-03-01.13:29:56.595 [pool-2-thread-2 ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-03-01.13:29:58.493 [pool-2-thread-2 ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-03-01.13:29:58.666 [main            ] INFO  MarketNode             - 拼团商品查询试算服务-MarketNode userId:xiaofuge 异步线程加载数据「GroupBuyActivityDiscountVO、SkuVO」完成
+25-03-01.13:29:58.666 [main            ] INFO  MarketNode             - 拼团商品查询试算服务-MarketNode userId:xiaofuge requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
+25-03-01.13:29:58.666 [main            ] INFO  ZJCalculateService     - 优惠策略折扣计算:0
+25-03-01.13:29:58.666 [main            ] INFO  EndNode                - 拼团商品查询试算服务-EndNode userId:xiaofuge requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
+25-03-01.13:29:58.666 [main            ] INFO  IIndexGroupBuyMarketServiceTest - 请求参数:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
+25-03-01.13:29:58.682 [main            ] INFO  IIndexGroupBuyMarketServiceTest - 返回结果:{"deductionPrice":0.00,"endTime":1733537980000,"goodsId":"9890001","goodsName":"《手写MyBatis：渐进式源码实践》","isEnable":false,"isVisible":false,"originalPrice":100.00,"startTime":1733537980000,"targetCount":1}
+25-03-01.13:29:58.697 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-03-01.13:29:58.901 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-03-01.13:30:58.449 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Starting IIndexGroupBuyMarketServiceTest using Java 1.8.0_411 on LAPTOP-T2LJDCAR with PID 21544 (started by zwx in C:\Users\zwx\Desktop\KnowledgePlanet\group-buy\group-buy-app)
+25-03-01.13:30:58.450 [main            ] INFO  IIndexGroupBuyMarketServiceTest - The following 1 profile is active: "dev"
+25-03-01.13:31:02.056 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Started IIndexGroupBuyMarketServiceTest in 4.209 seconds (JVM running for 5.491)
+25-03-01.13:31:33.108 [main            ] INFO  RootNode               - 拼团商品查询试算服务-RootNode userId:xiaofuge requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
+25-03-01.13:31:33.155 [pool-2-thread-2 ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-03-01.13:31:34.890 [pool-2-thread-2 ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-03-01.13:31:35.064 [main            ] INFO  MarketNode             - 拼团商品查询试算服务-MarketNode userId:xiaofuge 异步线程加载数据「GroupBuyActivityDiscountVO、SkuVO」完成
+25-03-01.13:31:35.064 [main            ] INFO  MarketNode             - 拼团商品查询试算服务-MarketNode userId:xiaofuge requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
+25-03-01.13:32:37.753 [main            ] INFO  ZJCalculateService     - 优惠策略折扣计算:0
+25-03-01.13:33:40.554 [main            ] INFO  EndNode                - 拼团商品查询试算服务-EndNode userId:xiaofuge requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
+25-03-01.13:33:59.165 [main            ] INFO  IIndexGroupBuyMarketServiceTest - 请求参数:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
+25-03-01.13:33:59.166 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=48s664ms565µs700ns).
+25-03-01.13:33:59.175 [main            ] INFO  IIndexGroupBuyMarketServiceTest - 返回结果:{"deductionPrice":0.00,"endTime":1733537980000,"goodsId":"9890001","goodsName":"《手写MyBatis：渐进式源码实践》","isEnable":false,"isVisible":false,"originalPrice":100.00,"startTime":1733537980000,"targetCount":1}
+25-03-01.13:33:59.190 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-03-01.13:33:59.567 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-03-01.13:34:07.976 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Starting IIndexGroupBuyMarketServiceTest using Java 1.8.0_411 on LAPTOP-T2LJDCAR with PID 20352 (started by zwx in C:\Users\zwx\Desktop\KnowledgePlanet\group-buy\group-buy-app)
+25-03-01.13:34:07.977 [main            ] INFO  IIndexGroupBuyMarketServiceTest - The following 1 profile is active: "dev"
+25-03-01.13:34:11.021 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Started IIndexGroupBuyMarketServiceTest in 3.535 seconds (JVM running for 4.689)
+25-03-01.13:34:11.485 [main            ] INFO  RootNode               - 拼团商品查询试算服务-RootNode userId:xiaofuge requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
+25-03-01.13:34:11.527 [pool-2-thread-2 ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-03-01.13:34:13.435 [pool-2-thread-2 ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-03-01.13:34:13.615 [main            ] INFO  MarketNode             - 拼团商品查询试算服务-MarketNode userId:xiaofuge 异步线程加载数据「GroupBuyActivityDiscountVO、SkuVO」完成
+25-03-01.13:34:13.616 [main            ] INFO  MarketNode             - 拼团商品查询试算服务-MarketNode userId:xiaofuge requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
+25-03-01.13:34:13.616 [main            ] INFO  ZJCalculateService     - 优惠策略折扣计算:0
+25-03-01.13:34:13.616 [main            ] INFO  EndNode                - 拼团商品查询试算服务-EndNode userId:xiaofuge requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
+25-03-01.13:34:13.618 [main            ] INFO  IIndexGroupBuyMarketServiceTest - 请求参数:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
+25-03-01.13:34:13.625 [main            ] INFO  IIndexGroupBuyMarketServiceTest - 返回结果:{"deductionPrice":80.00,"endTime":1733537980000,"goodsId":"9890001","goodsName":"《手写MyBatis：渐进式源码实践》","isEnable":false,"isVisible":false,"originalPrice":100.00,"startTime":1733537980000,"targetCount":1}
+25-03-01.13:34:13.638 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-03-01.13:34:13.887 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-03-01.13:36:58.043 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Starting IIndexGroupBuyMarketServiceTest using Java 1.8.0_411 on LAPTOP-T2LJDCAR with PID 19184 (started by zwx in C:\Users\zwx\Desktop\KnowledgePlanet\group-buy\group-buy-app)
+25-03-01.13:36:58.043 [main            ] INFO  IIndexGroupBuyMarketServiceTest - The following 1 profile is active: "dev"
+25-03-01.13:37:01.049 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Started IIndexGroupBuyMarketServiceTest in 3.479 seconds (JVM running for 4.694)
+25-03-01.13:37:01.495 [main            ] INFO  RootNode               - 拼团商品查询试算服务-RootNode userId:xiaofuge requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
+25-03-01.13:37:01.543 [pool-2-thread-2 ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-03-01.13:37:03.392 [pool-2-thread-2 ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-03-01.13:37:03.577 [main            ] INFO  MarketNode             - 拼团商品查询试算服务-MarketNode userId:xiaofuge 异步线程加载数据「GroupBuyActivityDiscountVO、SkuVO」完成
+25-03-01.13:37:03.577 [main            ] INFO  MarketNode             - 拼团商品查询试算服务-MarketNode userId:xiaofuge requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
+25-03-01.13:37:03.577 [main            ] INFO  ZKCalculateService     - 优惠策略折扣计算:0
+25-03-01.13:37:03.577 [main            ] INFO  EndNode                - 拼团商品查询试算服务-EndNode userId:xiaofuge requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
+25-03-01.13:37:03.579 [main            ] INFO  IIndexGroupBuyMarketServiceTest - 请求参数:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
+25-03-01.13:37:03.588 [main            ] INFO  IIndexGroupBuyMarketServiceTest - 返回结果:{"deductionPrice":70.000,"endTime":1733537980000,"goodsId":"9890001","goodsName":"《手写MyBatis：渐进式源码实践》","isEnable":false,"isVisible":false,"originalPrice":100.00,"startTime":1733537980000,"targetCount":1}
+25-03-01.13:37:03.603 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-03-01.13:37:03.846 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-03-01.13:37:39.737 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Starting IIndexGroupBuyMarketServiceTest using Java 1.8.0_411 on LAPTOP-T2LJDCAR with PID 19480 (started by zwx in C:\Users\zwx\Desktop\KnowledgePlanet\group-buy\group-buy-app)
+25-03-01.13:37:39.753 [main            ] INFO  IIndexGroupBuyMarketServiceTest - The following 1 profile is active: "dev"
+25-03-01.13:37:42.842 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Started IIndexGroupBuyMarketServiceTest in 3.593 seconds (JVM running for 4.797)
+25-03-01.13:37:43.311 [main            ] INFO  RootNode               - 拼团商品查询试算服务-RootNode userId:xiaofuge requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
+25-03-01.13:37:43.359 [pool-2-thread-2 ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-03-01.13:37:45.237 [pool-2-thread-2 ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-03-01.13:37:45.418 [main            ] INFO  MarketNode             - 拼团商品查询试算服务-MarketNode userId:xiaofuge 异步线程加载数据「GroupBuyActivityDiscountVO、SkuVO」完成
+25-03-01.13:37:45.418 [main            ] INFO  MarketNode             - 拼团商品查询试算服务-MarketNode userId:xiaofuge requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
+25-03-01.13:37:45.418 [main            ] INFO  NCalculateService      - 优惠策略折扣计算:0
+25-03-01.13:37:45.419 [main            ] INFO  EndNode                - 拼团商品查询试算服务-EndNode userId:xiaofuge requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
+25-03-01.13:37:45.420 [main            ] INFO  IIndexGroupBuyMarketServiceTest - 请求参数:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
+25-03-01.13:37:45.427 [main            ] INFO  IIndexGroupBuyMarketServiceTest - 返回结果:{"deductionPrice":1.99,"endTime":1733537980000,"goodsId":"9890001","goodsName":"《手写MyBatis：渐进式源码实践》","isEnable":false,"isVisible":false,"originalPrice":100.00,"startTime":1733537980000,"targetCount":1}
+25-03-01.13:37:45.440 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-03-01.13:37:45.713 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-03-01.13:38:08.791 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Starting IIndexGroupBuyMarketServiceTest using Java 1.8.0_411 on LAPTOP-T2LJDCAR with PID 22724 (started by zwx in C:\Users\zwx\Desktop\KnowledgePlanet\group-buy\group-buy-app)
+25-03-01.13:38:08.791 [main            ] INFO  IIndexGroupBuyMarketServiceTest - The following 1 profile is active: "dev"
+25-03-01.13:38:11.868 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Started IIndexGroupBuyMarketServiceTest in 3.569 seconds (JVM running for 4.719)
+25-03-01.13:38:12.333 [main            ] INFO  RootNode               - 拼团商品查询试算服务-RootNode userId:xiaofuge requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
+25-03-01.13:38:12.381 [pool-2-thread-2 ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-03-01.13:38:14.138 [pool-2-thread-2 ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-03-01.13:38:14.306 [main            ] INFO  MarketNode             - 拼团商品查询试算服务-MarketNode userId:xiaofuge 异步线程加载数据「GroupBuyActivityDiscountVO、SkuVO」完成
+25-03-01.13:38:14.306 [main            ] INFO  MarketNode             - 拼团商品查询试算服务-MarketNode userId:xiaofuge requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
+25-03-01.13:38:14.306 [main            ] INFO  NCalculateService      - 优惠策略折扣计算:0
+25-03-01.13:38:14.323 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-03-01.13:38:14.562 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-03-01.13:39:18.017 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Starting IIndexGroupBuyMarketServiceTest using Java 1.8.0_411 on LAPTOP-T2LJDCAR with PID 19928 (started by zwx in C:\Users\zwx\Desktop\KnowledgePlanet\group-buy\group-buy-app)
+25-03-01.13:39:18.019 [main            ] INFO  IIndexGroupBuyMarketServiceTest - The following 1 profile is active: "dev"
+25-03-01.13:39:21.704 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Started IIndexGroupBuyMarketServiceTest in 4.276 seconds (JVM running for 5.572)
+25-03-01.13:39:25.834 [main            ] INFO  RootNode               - 拼团商品查询试算服务-RootNode userId:xiaofuge requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
+25-03-01.13:39:25.885 [pool-2-thread-2 ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-03-01.13:39:27.807 [pool-2-thread-2 ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-03-01.13:39:27.996 [main            ] INFO  MarketNode             - 拼团商品查询试算服务-MarketNode userId:xiaofuge 异步线程加载数据「GroupBuyActivityDiscountVO、SkuVO」完成
+25-03-01.13:39:27.996 [main            ] INFO  MarketNode             - 拼团商品查询试算服务-MarketNode userId:xiaofuge requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
+25-03-01.13:39:43.263 [main            ] INFO  NCalculateService      - 优惠策略折扣计算:0
+25-03-01.13:39:56.451 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-03-01.13:39:56.630 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-03-01.13:40:19.707 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Starting IIndexGroupBuyMarketServiceTest using Java 1.8.0_411 on LAPTOP-T2LJDCAR with PID 17000 (started by zwx in C:\Users\zwx\Desktop\KnowledgePlanet\group-buy\group-buy-app)
+25-03-01.13:40:19.709 [main            ] INFO  IIndexGroupBuyMarketServiceTest - The following 1 profile is active: "dev"
+25-03-01.13:40:23.366 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Started IIndexGroupBuyMarketServiceTest in 4.249 seconds (JVM running for 5.59)
+25-03-01.13:40:53.965 [main            ] INFO  RootNode               - 拼团商品查询试算服务-RootNode userId:xiaofuge requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
+25-03-01.13:40:54.029 [pool-2-thread-2 ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-03-01.13:40:55.777 [pool-2-thread-2 ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-03-01.13:40:55.948 [main            ] INFO  MarketNode             - 拼团商品查询试算服务-MarketNode userId:xiaofuge 异步线程加载数据「GroupBuyActivityDiscountVO、SkuVO」完成
+25-03-01.13:40:55.948 [main            ] INFO  MarketNode             - 拼团商品查询试算服务-MarketNode userId:xiaofuge requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
+25-03-01.13:42:25.882 [main            ] INFO  NCalculateService      - 优惠策略折扣计算:0
+25-03-01.13:42:25.881 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m24s15ms562µs401ns).
+25-03-01.13:42:36.768 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-03-01.13:42:37.237 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-03-01.13:42:41.472 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Starting IIndexGroupBuyMarketServiceTest using Java 1.8.0_411 on LAPTOP-T2LJDCAR with PID 20784 (started by zwx in C:\Users\zwx\Desktop\KnowledgePlanet\group-buy\group-buy-app)
+25-03-01.13:42:41.473 [main            ] INFO  IIndexGroupBuyMarketServiceTest - The following 1 profile is active: "dev"
+25-03-01.13:42:44.472 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Started IIndexGroupBuyMarketServiceTest in 3.486 seconds (JVM running for 4.645)
+25-03-01.13:42:44.906 [main            ] INFO  RootNode               - 拼团商品查询试算服务-RootNode userId:xiaofuge requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
+25-03-01.13:42:44.945 [pool-2-thread-2 ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-03-01.13:42:46.739 [pool-2-thread-2 ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-03-01.13:42:46.903 [main            ] INFO  MarketNode             - 拼团商品查询试算服务-MarketNode userId:xiaofuge 异步线程加载数据「GroupBuyActivityDiscountVO、SkuVO」完成
+25-03-01.13:42:46.903 [main            ] INFO  MarketNode             - 拼团商品查询试算服务-MarketNode userId:xiaofuge requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
+25-03-01.13:42:46.903 [main            ] INFO  MMJCalculateService    - 优惠策略折扣计算:0
+25-03-01.13:42:46.903 [main            ] INFO  EndNode                - 拼团商品查询试算服务-EndNode userId:xiaofuge requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
+25-03-01.13:42:46.905 [main            ] INFO  IIndexGroupBuyMarketServiceTest - 请求参数:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
+25-03-01.13:42:46.911 [main            ] INFO  IIndexGroupBuyMarketServiceTest - 返回结果:{"deductionPrice":90.00,"endTime":1733537980000,"goodsId":"9890001","goodsName":"《手写MyBatis：渐进式源码实践》","isEnable":false,"isVisible":false,"originalPrice":100.00,"startTime":1733537980000,"targetCount":1}
+25-03-01.13:42:46.924 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-03-01.13:42:47.147 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-03-01.13:43:21.271 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Starting IIndexGroupBuyMarketServiceTest using Java 1.8.0_411 on LAPTOP-T2LJDCAR with PID 3508 (started by zwx in C:\Users\zwx\Desktop\KnowledgePlanet\group-buy\group-buy-app)
+25-03-01.13:43:21.271 [main            ] INFO  IIndexGroupBuyMarketServiceTest - The following 1 profile is active: "dev"
+25-03-01.13:43:24.262 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Started IIndexGroupBuyMarketServiceTest in 3.459 seconds (JVM running for 4.569)
+25-03-01.13:43:24.675 [main            ] INFO  RootNode               - 拼团商品查询试算服务-RootNode userId:xiaofuge requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
+25-03-01.13:43:24.722 [pool-2-thread-2 ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-03-01.13:43:26.588 [pool-2-thread-2 ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-03-01.13:43:26.776 [main            ] INFO  MarketNode             - 拼团商品查询试算服务-MarketNode userId:xiaofuge 异步线程加载数据「GroupBuyActivityDiscountVO、SkuVO」完成
+25-03-01.13:43:26.777 [main            ] INFO  MarketNode             - 拼团商品查询试算服务-MarketNode userId:xiaofuge requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
+25-03-01.13:43:26.777 [main            ] INFO  MMJCalculateService    - 优惠策略折扣计算:0
+25-03-01.13:43:26.777 [main            ] INFO  EndNode                - 拼团商品查询试算服务-EndNode userId:xiaofuge requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
+25-03-01.13:43:26.779 [main            ] INFO  IIndexGroupBuyMarketServiceTest - 请求参数:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
+25-03-01.13:43:26.786 [main            ] INFO  IIndexGroupBuyMarketServiceTest - 返回结果:{"deductionPrice":90.00,"endTime":1733537980000,"goodsId":"9890001","goodsName":"《手写MyBatis：渐进式源码实践》","isEnable":false,"isVisible":false,"originalPrice":100.00,"startTime":1733537980000,"targetCount":1}
+25-03-01.13:43:26.798 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-03-01.13:43:27.010 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-03-01.13:43:47.071 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Starting IIndexGroupBuyMarketServiceTest using Java 1.8.0_411 on LAPTOP-T2LJDCAR with PID 22820 (started by zwx in C:\Users\zwx\Desktop\KnowledgePlanet\group-buy\group-buy-app)
+25-03-01.13:43:47.073 [main            ] INFO  IIndexGroupBuyMarketServiceTest - The following 1 profile is active: "dev"
+25-03-01.13:43:50.056 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Started IIndexGroupBuyMarketServiceTest in 3.492 seconds (JVM running for 4.677)
+25-03-01.13:43:50.515 [main            ] INFO  RootNode               - 拼团商品查询试算服务-RootNode userId:xiaofuge requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
+25-03-01.13:43:50.563 [pool-2-thread-2 ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-03-01.13:43:52.438 [pool-2-thread-2 ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-03-01.13:43:52.622 [main            ] INFO  MarketNode             - 拼团商品查询试算服务-MarketNode userId:xiaofuge 异步线程加载数据「GroupBuyActivityDiscountVO、SkuVO」完成
+25-03-01.13:43:52.622 [main            ] INFO  MarketNode             - 拼团商品查询试算服务-MarketNode userId:xiaofuge requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
+25-03-01.13:43:52.622 [main            ] INFO  MMJCalculateService    - 优惠策略折扣计算:0
+25-03-01.13:43:52.622 [main            ] INFO  EndNode                - 拼团商品查询试算服务-EndNode userId:xiaofuge requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
+25-03-01.13:43:52.624 [main            ] INFO  IIndexGroupBuyMarketServiceTest - 请求参数:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
+25-03-01.13:43:52.631 [main            ] INFO  IIndexGroupBuyMarketServiceTest - 返回结果:{"deductionPrice":91.00,"endTime":1733537980000,"goodsId":"9890001","goodsName":"《手写MyBatis：渐进式源码实践》","isEnable":false,"isVisible":false,"originalPrice":91.00,"startTime":1733537980000,"targetCount":1}
+25-03-01.13:43:52.643 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-03-01.13:43:52.883 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-03-01.13:44:06.478 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Starting IIndexGroupBuyMarketServiceTest using Java 1.8.0_411 on LAPTOP-T2LJDCAR with PID 17308 (started by zwx in C:\Users\zwx\Desktop\KnowledgePlanet\group-buy\group-buy-app)
+25-03-01.13:44:06.479 [main            ] INFO  IIndexGroupBuyMarketServiceTest - The following 1 profile is active: "dev"
+25-03-01.13:44:09.606 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Started IIndexGroupBuyMarketServiceTest in 3.65 seconds (JVM running for 4.839)
+25-03-01.13:44:10.069 [main            ] INFO  RootNode               - 拼团商品查询试算服务-RootNode userId:xiaofuge requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
+25-03-01.13:44:10.113 [pool-2-thread-2 ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-03-01.13:44:11.923 [pool-2-thread-2 ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-03-01.13:44:12.114 [main            ] INFO  MarketNode             - 拼团商品查询试算服务-MarketNode userId:xiaofuge 异步线程加载数据「GroupBuyActivityDiscountVO、SkuVO」完成
+25-03-01.13:44:12.114 [main            ] INFO  MarketNode             - 拼团商品查询试算服务-MarketNode userId:xiaofuge requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
+25-03-01.13:44:12.114 [main            ] INFO  MMJCalculateService    - 优惠策略折扣计算:0
+25-03-01.13:44:12.114 [main            ] INFO  EndNode                - 拼团商品查询试算服务-EndNode userId:xiaofuge requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
+25-03-01.13:44:12.116 [main            ] INFO  IIndexGroupBuyMarketServiceTest - 请求参数:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
+25-03-01.13:44:12.123 [main            ] INFO  IIndexGroupBuyMarketServiceTest - 返回结果:{"deductionPrice":359.10,"endTime":1733537980000,"goodsId":"9890001","goodsName":"《手写MyBatis：渐进式源码实践》","isEnable":false,"isVisible":false,"originalPrice":399.00,"startTime":1733537980000,"targetCount":1}
+25-03-01.13:44:12.137 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-03-01.13:44:12.385 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-03-01.13:44:37.128 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Starting IIndexGroupBuyMarketServiceTest using Java 1.8.0_411 on LAPTOP-T2LJDCAR with PID 23276 (started by zwx in C:\Users\zwx\Desktop\KnowledgePlanet\group-buy\group-buy-app)
+25-03-01.13:44:37.130 [main            ] INFO  IIndexGroupBuyMarketServiceTest - The following 1 profile is active: "dev"
+25-03-01.13:44:40.641 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Started IIndexGroupBuyMarketServiceTest in 4.133 seconds (JVM running for 5.628)
+25-03-01.13:44:42.525 [main            ] INFO  RootNode               - 拼团商品查询试算服务-RootNode userId:xiaofuge requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
+25-03-01.13:44:42.572 [pool-2-thread-2 ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-03-01.13:44:44.440 [pool-2-thread-2 ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-03-01.13:44:44.622 [main            ] INFO  MarketNode             - 拼团商品查询试算服务-MarketNode userId:xiaofuge 异步线程加载数据「GroupBuyActivityDiscountVO、SkuVO」完成
+25-03-01.13:44:44.622 [main            ] INFO  MarketNode             - 拼团商品查询试算服务-MarketNode userId:xiaofuge requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
+25-03-01.13:44:45.679 [main            ] INFO  MMJCalculateService    - 优惠策略折扣计算:0
+25-03-01.13:45:50.774 [main            ] INFO  EndNode                - 拼团商品查询试算服务-EndNode userId:xiaofuge requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
+25-03-01.13:45:50.774 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m6s227ms124µs900ns).
+25-03-01.13:45:50.777 [main            ] INFO  IIndexGroupBuyMarketServiceTest - 请求参数:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
+25-03-01.13:45:50.786 [main            ] INFO  IIndexGroupBuyMarketServiceTest - 返回结果:{"deductionPrice":359.10,"endTime":1733537980000,"goodsId":"9890001","goodsName":"《手写MyBatis：渐进式源码实践》","isEnable":false,"isVisible":false,"originalPrice":399.00,"startTime":1733537980000,"targetCount":1}
+25-03-01.13:45:50.800 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-03-01.13:45:50.900 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-03-01.13:46:10.782 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Starting IIndexGroupBuyMarketServiceTest using Java 1.8.0_411 on LAPTOP-T2LJDCAR with PID 10320 (started by zwx in C:\Users\zwx\Desktop\KnowledgePlanet\group-buy\group-buy-app)
+25-03-01.13:46:10.783 [main            ] INFO  IIndexGroupBuyMarketServiceTest - The following 1 profile is active: "dev"
+25-03-01.13:46:13.917 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Started IIndexGroupBuyMarketServiceTest in 3.645 seconds (JVM running for 4.807)
+25-03-01.13:46:14.367 [main            ] INFO  RootNode               - 拼团商品查询试算服务-RootNode userId:xiaofuge requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
+25-03-01.13:46:14.414 [pool-2-thread-2 ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-03-01.13:46:16.228 [pool-2-thread-2 ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-03-01.13:46:16.403 [main            ] INFO  MarketNode             - 拼团商品查询试算服务-MarketNode userId:xiaofuge 异步线程加载数据「GroupBuyActivityDiscountVO、SkuVO」完成
+25-03-01.13:46:16.404 [main            ] INFO  MarketNode             - 拼团商品查询试算服务-MarketNode userId:xiaofuge requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
+25-03-01.13:46:16.404 [main            ] INFO  MMJCalculateService    - 优惠策略折扣计算:0
+25-03-01.13:46:16.404 [main            ] INFO  EndNode                - 拼团商品查询试算服务-EndNode userId:xiaofuge requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
+25-03-01.13:46:16.406 [main            ] INFO  IIndexGroupBuyMarketServiceTest - 请求参数:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
+25-03-01.13:46:16.413 [main            ] INFO  IIndexGroupBuyMarketServiceTest - 返回结果:{"deductionPrice":369.00,"endTime":1733537980000,"goodsId":"9890001","goodsName":"《手写MyBatis：渐进式源码实践》","isEnable":false,"isVisible":false,"originalPrice":399.00,"startTime":1733537980000,"targetCount":1}
+25-03-01.13:46:16.425 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-03-01.13:46:16.691 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
