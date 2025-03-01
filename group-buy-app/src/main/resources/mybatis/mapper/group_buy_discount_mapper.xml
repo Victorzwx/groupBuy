@@ -6,4 +6,10 @@
     <select id="queryGroupBuyDiscountList" resultType="cn.bugstack.infrastructure.dao.po.GroupBuyDiscount">
         select * from group_buy_discount
     </select>
+    <select id="queryGroupBuyActivityDiscountByDiscountId"
+            resultType="cn.bugstack.infrastructure.dao.po.GroupBuyDiscount">
+        select discount_id, discount_name, discount_desc, discount_type, market_plan, market_expr, tag_id
+        from group_buy_discount
+        where discount_id = #{discountId}
+    </select>
 </mapper>
