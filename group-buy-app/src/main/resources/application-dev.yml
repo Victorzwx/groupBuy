@@ -42,3 +42,20 @@ logging:
   level:
     root: info
   config: classpath:logback-spring.xml
+
+
+# Redis
+redis:
+  sdk:
+    config:
+      host: 117.72.40.24
+      port: 16379
+      database: 1
+      pool-size: 10
+      min-idle-size: 5
+      idle-timeout: 30000
+      connect-timeout: 5000
+      retry-attempts: 3
+      retry-interval: 1000
+      ping-interval: 60000
+      keep-alive: true
