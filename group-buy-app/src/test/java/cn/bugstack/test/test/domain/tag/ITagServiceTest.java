@@ -28,7 +28,7 @@ public class ITagServiceTest {
 
     @Test
     public void test_tag_job() {
-        tagService.execTagBatchJob("RQ_KJHKL98UU78H66554GFDV", "10001");
+        tagService.execTagBatchJob("1", "10001");
     }
 
     @Test
@@ -36,7 +36,9 @@ public class ITagServiceTest {
         RBitSet bitSet = redisService.getBitSet("RQ_KJHKL98UU78H66554GFDV");
         // 是否存在
         log.info("xiaofuge 存在，预期结果为 true，测试结果:{}", bitSet.get(redisService.getIndexFromUserId("xiaofuge")));
-        log.info("gudebai 不存在，预期结果为 false，测试结果:{}", bitSet.get(redisService.getIndexFromUserId("gudebai")));
+        log.info("liergou 存在，预期结果为 true，测试结果:{}", bitSet.get(redisService.getIndexFromUserId("liergou")));
+
+        log.info("xiaofuge2 不存在，预期结果为 false，测试结果:{}", bitSet.get(redisService.getIndexFromUserId("xiaofuge2")));
     }
 
 }

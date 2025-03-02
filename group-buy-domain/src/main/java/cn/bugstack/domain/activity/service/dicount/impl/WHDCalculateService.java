@@ -11,7 +11,7 @@ import java.math.BigDecimal;
 public class WHDCalculateService extends AbstractDiscountCalculateService {
     @Override
     protected BigDecimal docalculate(BigDecimal originalPrice, GroupBuyActivityDiscountVO.GroupBuyDiscount groupBuyDiscount) {
-        log.info("不参与活动");
+        log.info("优惠策略折扣计算:{}", groupBuyDiscount.getDiscountName());
 
         return originalPrice;
     }

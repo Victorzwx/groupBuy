@@ -1,11 +1,14 @@
 package cn.bugstack.domain.activity.model.valobj;
 
+import cn.bugstack.types.common.Constants;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.apache.commons.lang3.StringUtils;
 
 import java.util.Date;
+import java.util.Objects;
 
 /**
  * @author Fuzhengwei bugstack.cn @小傅哥
@@ -78,6 +81,28 @@ public class GroupBuyActivityDiscountVO {
      * 人群标签规则范围
      */
     private String tagScope;
+
+
+    /**
+     * 可见限制
+     * 只要存在这样一个值，那么首次获得的默认值就是 false
+     */
+    public boolean isVisible() {
+        if(StringUtils.isBlank(this.tagScope)) return TagScopeEnumVO.VISIBLE.getAllow();
+        boolean equals = Objects.equals('1', this.tagScope.charAt(0));
+        return equals==true?TagScopeEnumVO.VISIBLE.getRefuse():TagScopeEnumVO.VISIBLE.getAllow();
+
+    }
+
+    /**
+     * 参与限制
+     * 只要存在这样一个值，那么首次获得的默认值就是 false
+     */
+    public boolean isEnable() {
+        if(StringUtils.isBlank(this.tagScope)) return TagScopeEnumVO.ENABLE.getAllow();
+        boolean equals = Objects.equals('1', this.tagScope.charAt(1));
+        return equals==true?TagScopeEnumVO.ENABLE.getRefuse():TagScopeEnumVO.ENABLE.getAllow();
+    }
 
     @Getter
     @Builder
