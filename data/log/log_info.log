@@ -264,3 +264,31 @@
 25-03-03.11:07:33.993 [redisson-3-14   ] INFO  DCCValueBeanFactory    - DCC 节点监听，动态设置值 group_buy_market_dcc_cutRange 100
 25-03-03.11:10:17.148 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
 25-03-03.11:10:19.303 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-03-03.19:12:37.477 [main            ] INFO  Application            - Starting Application using Java 1.8.0_411 on LAPTOP-T2LJDCAR with PID 18552 (C:\Users\zwx\Desktop\KnowledgePlanet\group-buy\group-buy-app\target\classes started by zwx in C:\Users\zwx\Desktop\KnowledgePlanet\group-buy)
+25-03-03.19:12:37.479 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-03-03.19:12:38.570 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-03-03.19:12:38.572 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-03-03.19:12:38.641 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 53 ms. Found 0 Redis repository interfaces.
+25-03-03.19:12:38.943 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisClientConfig' of type [cn.bugstack.config.RedisClientConfig$$EnhancerBySpringCGLIB$$6c759ed9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+25-03-03.19:12:39.009 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redis.sdk.config-cn.bugstack.config.RedisClientConfigProperties' of type [cn.bugstack.config.RedisClientConfigProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+25-03-03.19:12:39.207 [main            ] INFO  Version                - Redisson 3.26.0
+25-03-03.19:12:40.041 [redisson-netty-1-6] INFO  ConnectionsHolder      - 1 connections initialized for 117.72.40.24/117.72.40.24:16379
+25-03-03.19:12:40.335 [redisson-netty-1-13] INFO  ConnectionsHolder      - 5 connections initialized for 117.72.40.24/117.72.40.24:16379
+25-03-03.19:12:40.416 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redissonClient' of type [org.redisson.Redisson] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+25-03-03.19:12:40.704 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-03-03.19:12:40.717 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-03-03.19:12:40.717 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-03-03.19:12:40.717 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-03-03.19:12:40.853 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-03-03.19:12:40.853 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3335 ms
+25-03-03.19:12:42.324 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-03-03.19:12:42.356 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-03-03.19:12:42.369 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-03-03.19:12:42.382 [main            ] INFO  Application            - Started Application in 5.364 seconds (JVM running for 6.56)
+25-03-03.19:12:43.753 [RMI TCP Connection(2)-10.20.14.222] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-03-03.19:12:43.753 [RMI TCP Connection(2)-10.20.14.222] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-03-03.19:12:43.754 [RMI TCP Connection(2)-10.20.14.222] INFO  DispatcherServlet      - Completed initialization in 1 ms
+25-03-03.19:12:43.754 [RMI TCP Connection(3)-10.20.14.222] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-03-03.19:12:45.058 [RMI TCP Connection(3)-10.20.14.222] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-03-03.19:13:11.703 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-03-03.19:13:12.086 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
