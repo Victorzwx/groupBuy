@@ -19,9 +19,7 @@ import cn.bugstack.types.exception.AppException;
 import com.alibaba.fastjson.JSON;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.Objects;
@@ -43,8 +41,12 @@ public class MarketTradeController implements IMarketTradeService {
     @Resource
     private ITradeLockOrderService tradeOrderService;
 
+    /**
+     * 拼团营销锁单
+     */
+    @RequestMapping(value = "lock_market_pay_order", method = RequestMethod.POST)
     @Override
-    public Response<LockMarketPayOrderResponseDTO> lockMarketPayOrder(LockMarketPayOrderRequestDTO lockMarketPayOrderRequestDTO) {
+    public Response<LockMarketPayOrderResponseDTO> lockMarketPayOrder(@RequestBody LockMarketPayOrderRequestDTO lockMarketPayOrderRequestDTO) {
         try {
             // 参数
             String userId = lockMarketPayOrderRequestDTO.getUserId();
@@ -93,8 +95,6 @@ public class MarketTradeController implements IMarketTradeService {
                 }
             }
 
-
-
             // 营销优惠试算
             TrialBalanceEntity trialBalanceEntity = indexGroupBuyMarketService.indexMarketTrial(MarketProductEntity.builder()
                     .userId(userId)
@@ -103,6 +103,7 @@ public class MarketTradeController implements IMarketTradeService {
                     .goodsId(goodsId)
                     .activityId(activityId)
                     .build());
+
             // 人群限定
             if (!trialBalanceEntity.getIsVisible() || !trialBalanceEntity.getIsEnable()){
                 return Response.<LockMarketPayOrderResponseDTO>builder()
@@ -111,12 +112,9 @@ public class MarketTradeController implements IMarketTradeService {
                         .build();
             }
 
-
             GroupBuyActivityDiscountVO groupBuyActivityDiscountVO = trialBalanceEntity.getGroupBuyActivityDiscountVO();
 
-
-
-            // 锁单
+            // 营销优惠锁单
             marketPayOrderEntity = tradeOrderService.lockMarketPayOrder(
                     UserEntity.builder().userId(userId).build(),
                     PayActivityEntity.builder()
@@ -125,6 +123,7 @@ public class MarketTradeController implements IMarketTradeService {
                             .activityName(groupBuyActivityDiscountVO.getActivityName())
                             .startTime(groupBuyActivityDiscountVO.getStartTime())
                             .endTime(groupBuyActivityDiscountVO.getEndTime())
+                            .validTime(groupBuyActivityDiscountVO.getValidTime())
                             .targetCount(groupBuyActivityDiscountVO.getTarget())
                             .build(),
                     PayDiscountEntity.builder()
