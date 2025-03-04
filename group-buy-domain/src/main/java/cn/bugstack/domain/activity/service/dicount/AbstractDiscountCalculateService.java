@@ -1,13 +1,17 @@
 package cn.bugstack.domain.activity.service.dicount;
 
+import cn.bugstack.domain.activity.adapter.repository.IActivityRepository;
 import cn.bugstack.domain.activity.model.valobj.DiscountTypeEnum;
 import cn.bugstack.domain.activity.model.valobj.GroupBuyActivityDiscountVO;
 import lombok.extern.slf4j.Slf4j;
 
+import javax.annotation.Resource;
 import java.math.BigDecimal;
 @Slf4j
 public abstract class AbstractDiscountCalculateService implements IDiscountCalculateService{
 
+    @Resource
+    protected IActivityRepository repository;
     @Override
     public BigDecimal calculate(String userId, BigDecimal originalPrice, GroupBuyActivityDiscountVO.GroupBuyDiscount groupBuyDiscount) {
         // 1. 人群标签过滤
@@ -18,7 +22,7 @@ public abstract class AbstractDiscountCalculateService implements IDiscountCalcu
         return validPrice(docalculate(originalPrice, groupBuyDiscount));
     }
     private boolean filterTagId(String userId, String tagId) {
-        return true;
+        return repository.isTagCrowdRange(tagId, userId);
     }
 
     protected abstract BigDecimal docalculate(BigDecimal originalPrice, GroupBuyActivityDiscountVO.GroupBuyDiscount groupBuyDiscount);
