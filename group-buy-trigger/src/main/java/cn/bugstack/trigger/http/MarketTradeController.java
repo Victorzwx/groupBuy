@@ -93,6 +93,8 @@ public class MarketTradeController implements IMarketTradeService {
                 }
             }
 
+
+
             // 营销优惠试算
             TrialBalanceEntity trialBalanceEntity = indexGroupBuyMarketService.indexMarketTrial(MarketProductEntity.builder()
                     .userId(userId)
@@ -101,8 +103,18 @@ public class MarketTradeController implements IMarketTradeService {
                     .goodsId(goodsId)
                     .activityId(activityId)
                     .build());
+            // 人群限定
+            if (!trialBalanceEntity.getIsVisible() || !trialBalanceEntity.getIsEnable()){
+                return Response.<LockMarketPayOrderResponseDTO>builder()
+                        .code(ResponseCode.E0007.getCode())
+                        .info(ResponseCode.E0007.getInfo())
+                        .build();
+            }
+
 
             GroupBuyActivityDiscountVO groupBuyActivityDiscountVO = trialBalanceEntity.getGroupBuyActivityDiscountVO();
+
+
 
             // 锁单
             marketPayOrderEntity = tradeOrderService.lockMarketPayOrder(
@@ -122,6 +134,7 @@ public class MarketTradeController implements IMarketTradeService {
                             .goodsName(trialBalanceEntity.getGoodsName())
                             .originalPrice(trialBalanceEntity.getOriginalPrice())
                             .deductionPrice(trialBalanceEntity.getDeductionPrice())
+                            .payPrice(trialBalanceEntity.getPayPrice())
                             .outTradeNo(outTradeNo)
                             .build());
 
