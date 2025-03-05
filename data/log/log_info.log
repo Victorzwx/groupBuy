@@ -1,28 +1,340 @@
-25-03-04.19:25:54.721 [main            ] INFO  Application            - Starting Application using Java 1.8.0_411 on LAPTOP-T2LJDCAR with PID 3516 (C:\Users\zwx\Desktop\KnowledgePlanet\group-buy\group-buy-app\target\classes started by zwx in C:\Users\zwx\Desktop\KnowledgePlanet\group-buy)
-25-03-04.19:25:54.723 [main            ] INFO  Application            - The following 1 profile is active: "dev"
-25-03-04.19:25:55.809 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-25-03-04.19:25:55.812 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-25-03-04.19:25:55.891 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 62 ms. Found 0 Redis repository interfaces.
-25-03-04.19:25:56.206 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisClientConfig' of type [cn.bugstack.config.RedisClientConfig$$EnhancerBySpringCGLIB$$5fc35d84] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-25-03-04.19:25:56.273 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redis.sdk.config-cn.bugstack.config.RedisClientConfigProperties' of type [cn.bugstack.config.RedisClientConfigProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-25-03-04.19:25:56.500 [main            ] INFO  Version                - Redisson 3.26.0
-25-03-04.19:25:57.295 [redisson-netty-1-6] INFO  ConnectionsHolder      - 1 connections initialized for 117.72.40.24/117.72.40.24:16379
-25-03-04.19:25:57.658 [redisson-netty-1-13] INFO  ConnectionsHolder      - 5 connections initialized for 117.72.40.24/117.72.40.24:16379
-25-03-04.19:25:57.738 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redissonClient' of type [org.redisson.Redisson] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-25-03-04.19:25:58.015 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
-25-03-04.19:25:58.025 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
-25-03-04.19:25:58.026 [main            ] INFO  StandardService        - Starting service [Tomcat]
-25-03-04.19:25:58.026 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
-25-03-04.19:25:58.159 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
-25-03-04.19:25:58.160 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3394 ms
-25-03-04.19:25:59.668 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-25-03-04.19:25:59.710 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
-25-03-04.19:25:59.722 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
-25-03-04.19:25:59.735 [main            ] INFO  Application            - Started Application in 5.471 seconds (JVM running for 6.52)
-25-03-04.19:25:59.932 [RMI TCP Connection(1)-192.168.146.1] INFO  HikariDataSource       - HikariPool-1 - Starting...
-25-03-04.19:26:00.786 [RMI TCP Connection(3)-192.168.146.1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
-25-03-04.19:26:00.786 [RMI TCP Connection(3)-192.168.146.1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
-25-03-04.19:26:00.787 [RMI TCP Connection(3)-192.168.146.1] INFO  DispatcherServlet      - Completed initialization in 1 ms
-25-03-04.19:26:01.491 [RMI TCP Connection(1)-192.168.146.1] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-25-03-04.19:30:23.339 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-25-03-04.19:30:23.831 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-03-05.11:20:45.602 [main            ] INFO  Application            - Starting Application using Java 1.8.0_411 on LAPTOP-T2LJDCAR with PID 16028 (C:\Users\zwx\Desktop\KnowledgePlanet\group-buy\group-buy-market-app\target\classes started by zwx in C:\Users\zwx\Desktop\KnowledgePlanet\group-buy)
+25-03-05.11:20:45.605 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-03-05.11:20:47.215 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-03-05.11:20:47.218 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-03-05.11:20:47.317 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 76 ms. Found 0 Redis repository interfaces.
+25-03-05.11:20:47.702 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisClientConfig' of type [cn.bugstack.config.RedisClientConfig$$EnhancerBySpringCGLIB$$ebfd4b28] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+25-03-05.11:20:47.773 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redis.sdk.config-cn.bugstack.config.RedisClientConfigProperties' of type [cn.bugstack.config.RedisClientConfigProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+25-03-05.11:20:48.014 [main            ] INFO  Version                - Redisson 3.26.0
+25-03-05.11:20:48.900 [redisson-netty-1-4] INFO  ConnectionsHolder      - 1 connections initialized for 117.72.40.24/117.72.40.24:16379
+25-03-05.11:20:49.494 [redisson-netty-1-13] INFO  ConnectionsHolder      - 5 connections initialized for 117.72.40.24/117.72.40.24:16379
+25-03-05.11:20:49.749 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redissonClient' of type [org.redisson.Redisson] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+25-03-05.11:20:50.075 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-03-05.11:20:50.087 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-03-05.11:20:50.087 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-03-05.11:20:50.087 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-03-05.11:20:50.232 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-03-05.11:20:50.232 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4576 ms
+25-03-05.11:20:52.942 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-03-05.11:20:52.989 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-03-05.11:20:53.006 [main            ] INFO  Application            - Started Application in 8.271 seconds (JVM running for 9.588)
+25-03-05.11:21:32.071 [main            ] INFO  Application            - Starting Application using Java 1.8.0_411 on LAPTOP-T2LJDCAR with PID 13512 (C:\Users\zwx\Desktop\KnowledgePlanet\group-buy\group-buy-market-app\target\classes started by zwx in C:\Users\zwx\Desktop\KnowledgePlanet\group-buy)
+25-03-05.11:21:32.073 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-03-05.11:21:33.211 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-03-05.11:21:33.214 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-03-05.11:21:33.301 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 72 ms. Found 0 Redis repository interfaces.
+25-03-05.11:21:33.668 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisClientConfig' of type [cn.bugstack.config.RedisClientConfig$$EnhancerBySpringCGLIB$$549544f1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+25-03-05.11:21:33.738 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redis.sdk.config-cn.bugstack.config.RedisClientConfigProperties' of type [cn.bugstack.config.RedisClientConfigProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+25-03-05.11:21:33.955 [main            ] INFO  Version                - Redisson 3.26.0
+25-03-05.11:21:34.793 [redisson-netty-1-6] INFO  ConnectionsHolder      - 1 connections initialized for 117.72.40.24/117.72.40.24:16379
+25-03-05.11:21:35.358 [redisson-netty-1-13] INFO  ConnectionsHolder      - 5 connections initialized for 117.72.40.24/117.72.40.24:16379
+25-03-05.11:21:35.543 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redissonClient' of type [org.redisson.Redisson] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+25-03-05.11:21:36.003 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-03-05.11:21:36.018 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-03-05.11:21:36.019 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-03-05.11:21:36.019 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-03-05.11:21:36.228 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-03-05.11:21:36.228 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4113 ms
+25-03-05.11:21:40.182 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-03-05.11:21:40.223 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-03-05.11:21:40.240 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-03-05.11:21:40.263 [main            ] INFO  Application            - Started Application in 8.663 seconds (JVM running for 9.78)
+25-03-05.11:21:40.396 [RMI TCP Connection(3)-192.168.146.1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-03-05.11:21:40.396 [RMI TCP Connection(3)-192.168.146.1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-03-05.11:21:40.398 [RMI TCP Connection(3)-192.168.146.1] INFO  DispatcherServlet      - Completed initialization in 2 ms
+25-03-05.11:21:41.234 [RMI TCP Connection(5)-192.168.146.1] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-03-05.11:21:42.740 [RMI TCP Connection(5)-192.168.146.1] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-03-05.11:21:45.010 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-03-05.11:21:45.581 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-03-05.11:22:00.006 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-03-05.11:22:00.132 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-03-05.11:22:15.014 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-03-05.11:22:15.196 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-03-05.11:22:30.016 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-03-05.11:22:30.114 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-03-05.11:22:45.013 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-03-05.11:22:45.159 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-03-05.11:23:00.005 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-03-05.11:23:00.152 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-03-05.11:23:15.015 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-03-05.11:23:15.197 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-03-05.11:23:30.005 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-03-05.11:23:30.160 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-03-05.11:23:45.010 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-03-05.11:23:45.152 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-03-05.11:24:00.008 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-03-05.11:24:00.125 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-03-05.11:24:15.002 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-03-05.11:24:15.144 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-03-05.11:24:30.013 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-03-05.11:24:30.186 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-03-05.11:24:45.021 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-03-05.11:24:45.116 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-03-05.11:25:00.018 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-03-05.11:25:00.161 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-03-05.11:25:15.011 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-03-05.11:25:15.535 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-03-05.11:25:30.016 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-03-05.11:25:30.119 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-03-05.11:25:45.015 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-03-05.11:25:45.160 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-03-05.11:26:00.012 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-03-05.11:26:00.164 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-03-05.11:26:15.007 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-03-05.11:26:15.115 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-03-05.11:26:30.006 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-03-05.11:26:30.172 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-03-05.11:26:45.003 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-03-05.11:26:45.170 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-03-05.11:27:00.001 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-03-05.11:27:00.124 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-03-05.11:27:15.012 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-03-05.11:27:15.135 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-03-05.11:27:30.012 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-03-05.11:27:30.123 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-03-05.11:27:45.018 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-03-05.11:27:45.118 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-03-05.11:28:00.001 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-03-05.11:28:00.096 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-03-05.11:28:15.014 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-03-05.11:28:15.140 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-03-05.11:28:30.007 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-03-05.11:28:30.120 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-03-05.11:28:45.010 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-03-05.11:28:45.120 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-03-05.11:29:00.018 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-03-05.11:29:00.150 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-03-05.11:29:15.005 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-03-05.11:29:15.125 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-03-05.11:29:30.003 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-03-05.11:29:30.097 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-03-05.11:29:45.017 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-03-05.11:29:45.129 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-03-05.11:30:00.001 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-03-05.11:30:00.095 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-03-05.11:30:15.004 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-03-05.11:30:15.099 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-03-05.11:30:30.016 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-03-05.11:30:30.113 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-03-05.11:30:44.434 [http-nio-8091-exec-2] INFO  TestApiClientController - 模拟测试第三方服务接收拼团回调 {"outTradeNoList":["780210101145","150224500269","908882566460"],"teamId":"90905470"}
+25-03-05.11:30:45.011 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-03-05.11:30:45.106 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-03-05.11:31:00.013 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-03-05.11:31:20.591 [scheduling-1    ] WARN  ProxyConnection        - HikariPool-1 - Connection com.mysql.cj.jdbc.ConnectionImpl@7582115e marked as broken because of SQLSTATE(08S01), ErrorCode(0)
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 19,250 milliseconds ago. The last packet sent successfully to the server was 19,250 milliseconds ago.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:370)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:64)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:89)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at sun.reflect.GeneratedMethodAccessor21.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427)
+	at com.sun.proxy.$Proxy98.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:224)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:152)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
+	at com.sun.proxy.$Proxy107.queryUnExecutedNotifyTaskList(Unknown Source)
+	at cn.bugstack.infrastructure.adapter.repository.TradeRepository.queryUnExecutedNotifyTaskList(TradeRepository.java:270)
+	at cn.bugstack.infrastructure.adapter.repository.TradeRepository$$FastClassBySpringCGLIB$$385a4bbd.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at cn.bugstack.infrastructure.adapter.repository.TradeRepository$$EnhancerBySpringCGLIB$$931cf721.queryUnExecutedNotifyTaskList(<generated>)
+	at cn.bugstack.domain.trade.service.settlement.TradeSettlementOrderService.execSettlementNotifyJob(TradeSettlementOrderService.java:98)
+	at cn.bugstack.trigger.job.GroupBuyNotifyJob.exec(GroupBuyNotifyJob.java:27)
+	at sun.reflect.GeneratedMethodAccessor20.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:95)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 19,250 milliseconds ago. The last packet sent successfully to the server was 19,250 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:544)
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:708)
+	at com.mysql.cj.protocol.a.NativeProtocol.sendCommand(NativeProtocol.java:647)
+	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryPacket(NativeProtocol.java:946)
+	at com.mysql.cj.NativeSession.execSQL(NativeSession.java:1075)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:930)
+	... 49 common frames omitted
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:475)
+	at sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:469)
+	at sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:69)
+	at sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1271)
+	at sun.security.ssl.SSLSocketImpl.access$300(SSLSocketImpl.java:76)
+	at sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:948)
+	at java.io.FilterInputStream.read(FilterInputStream.java:133)
+	at com.mysql.cj.protocol.FullReadInputStream.readFully(FullReadInputStream.java:64)
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:63)
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:45)
+	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:52)
+	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:41)
+	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:54)
+	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:44)
+	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:538)
+	... 54 common frames omitted
+25-03-05.11:31:20.747 [scheduling-1    ] ERROR GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务失败
+org.springframework.dao.RecoverableDataAccessException: 
+### Error querying database.  Cause: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 19,250 milliseconds ago. The last packet sent successfully to the server was 19,250 milliseconds ago.
+### The error may exist in file [C:\Users\zwx\Desktop\KnowledgePlanet\group-buy\group-buy-market-app\target\classes\mybatis\mapper\nofify_task_mapper.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: select activity_id, team_id, notify_url, notify_count, notify_status, parameter_json         from notify_task         where notify_status in (0, 2)         limit 50
+### Cause: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 19,250 milliseconds ago. The last packet sent successfully to the server was 19,250 milliseconds ago.
+; Communications link failure
+
+The last packet successfully received from the server was 19,250 milliseconds ago. The last packet sent successfully to the server was 19,250 milliseconds ago.; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 19,250 milliseconds ago. The last packet sent successfully to the server was 19,250 milliseconds ago.
+	at org.springframework.jdbc.support.SQLExceptionSubclassTranslator.doTranslate(SQLExceptionSubclassTranslator.java:100)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:70)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:79)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:91)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:441)
+	at com.sun.proxy.$Proxy98.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:224)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:152)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
+	at com.sun.proxy.$Proxy107.queryUnExecutedNotifyTaskList(Unknown Source)
+	at cn.bugstack.infrastructure.adapter.repository.TradeRepository.queryUnExecutedNotifyTaskList(TradeRepository.java:270)
+	at cn.bugstack.infrastructure.adapter.repository.TradeRepository$$FastClassBySpringCGLIB$$385a4bbd.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at cn.bugstack.infrastructure.adapter.repository.TradeRepository$$EnhancerBySpringCGLIB$$931cf721.queryUnExecutedNotifyTaskList(<generated>)
+	at cn.bugstack.domain.trade.service.settlement.TradeSettlementOrderService.execSettlementNotifyJob(TradeSettlementOrderService.java:98)
+	at cn.bugstack.trigger.job.GroupBuyNotifyJob.exec(GroupBuyNotifyJob.java:27)
+	at sun.reflect.GeneratedMethodAccessor20.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:95)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 19,250 milliseconds ago. The last packet sent successfully to the server was 19,250 milliseconds ago.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:370)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:64)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:89)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at sun.reflect.GeneratedMethodAccessor21.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427)
+	... 33 common frames omitted
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 19,250 milliseconds ago. The last packet sent successfully to the server was 19,250 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:544)
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:708)
+	at com.mysql.cj.protocol.a.NativeProtocol.sendCommand(NativeProtocol.java:647)
+	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryPacket(NativeProtocol.java:946)
+	at com.mysql.cj.NativeSession.execSQL(NativeSession.java:1075)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:930)
+	... 49 common frames omitted
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:475)
+	at sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:469)
+	at sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:69)
+	at sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1271)
+	at sun.security.ssl.SSLSocketImpl.access$300(SSLSocketImpl.java:76)
+	at sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:948)
+	at java.io.FilterInputStream.read(FilterInputStream.java:133)
+	at com.mysql.cj.protocol.FullReadInputStream.readFully(FullReadInputStream.java:64)
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:63)
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:45)
+	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:52)
+	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:41)
+	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:54)
+	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:44)
+	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:538)
+	... 54 common frames omitted
+25-03-05.11:31:30.011 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-03-05.11:31:30.143 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-03-05.11:31:45.009 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-03-05.11:31:45.122 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-03-05.11:31:57.266 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-03-05.11:31:58.019 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.

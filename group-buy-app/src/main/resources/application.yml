@@ -1,5 +1,0 @@
-spring:
-  config:
-    name: group-buy-app
-  profiles:
-    active: dev
