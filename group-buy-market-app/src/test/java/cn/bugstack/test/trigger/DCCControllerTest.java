@@ -1,8 +1,8 @@
 package cn.bugstack.test.trigger;
 
 import cn.bugstack.api.IDCCService;
-import cn.bugstack.domain.activity.model.entity.MarketProductEntity;
-import cn.bugstack.domain.activity.model.entity.TrialBalanceEntity;
+import cn.bugstack.domain.activity.model.aggregate.TrialResponseAggerate;
+import cn.bugstack.domain.activity.model.entity.TrialRequestEntity;
 import cn.bugstack.domain.activity.service.IIndexGroupBuyMarketService;
 import com.alibaba.fastjson.JSON;
 import lombok.extern.slf4j.Slf4j;
@@ -32,7 +32,7 @@ public class DCCControllerTest {
     @Test
     public void test_updateConfig() {
         // 动态调整配置
-        dccService.updateConfig("downgradeSwitch", "1");
+        dccService.updateConfig("downgradeSwitch", "0");
     }
 
     @Test
@@ -43,15 +43,15 @@ public class DCCControllerTest {
         Thread.sleep(1000);
 
         // 营销验证
-        MarketProductEntity marketProductEntity = new MarketProductEntity();
-        marketProductEntity.setUserId("xiaofuge");
-        marketProductEntity.setSource("s01");
-        marketProductEntity.setChannel("c01");
-        marketProductEntity.setGoodsId("9890001");
+        TrialRequestEntity trialRequestEntity = new TrialRequestEntity();
+        trialRequestEntity.setUserId("xiaofuge");
+        trialRequestEntity.setSource("s01");
+        trialRequestEntity.setChannel("c01");
+        trialRequestEntity.setGoodsId("9890001");
 
-        TrialBalanceEntity trialBalanceEntity = indexGroupBuyMarketService.indexMarketTrial(marketProductEntity);
-        log.info("请求参数:{}", JSON.toJSONString(marketProductEntity));
-        log.info("返回结果:{}", JSON.toJSONString(trialBalanceEntity));
+        TrialResponseAggerate trialResponseAggerate = indexGroupBuyMarketService.indexMarketTrial(trialRequestEntity);
+        log.info("请求参数:{}", JSON.toJSONString(trialRequestEntity));
+        log.info("返回结果:{}", JSON.toJSONString(trialResponseAggerate));
     }
 
 

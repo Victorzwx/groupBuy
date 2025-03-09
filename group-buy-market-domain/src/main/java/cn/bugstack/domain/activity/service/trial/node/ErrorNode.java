@@ -1,7 +1,7 @@
 package cn.bugstack.domain.activity.service.trial.node;
 
-import cn.bugstack.domain.activity.model.entity.MarketProductEntity;
-import cn.bugstack.domain.activity.model.entity.TrialBalanceEntity;
+import cn.bugstack.domain.activity.model.aggregate.TrialResponseAggerate;
+import cn.bugstack.domain.activity.model.entity.TrialRequestEntity;
 import cn.bugstack.domain.activity.service.trial.AbstractGroupBuyMarketSupport;
 import cn.bugstack.domain.activity.service.trial.factory.DefaultActivityStrategyFactory;
 import cn.bugstack.types.design.framework.tree.StrategyHandler;
@@ -18,23 +18,23 @@ import org.springframework.stereotype.Service;
  */
 @Slf4j
 @Service
-public class ErrorNode extends AbstractGroupBuyMarketSupport<MarketProductEntity, DefaultActivityStrategyFactory.DynamicContext, TrialBalanceEntity> {
+public class ErrorNode extends AbstractGroupBuyMarketSupport<TrialRequestEntity, DefaultActivityStrategyFactory.DynamicContext, TrialResponseAggerate> {
 
     @Override
-    protected TrialBalanceEntity doApply(MarketProductEntity requestParameter, DefaultActivityStrategyFactory.DynamicContext dynamicContext) throws Exception {
+    protected TrialResponseAggerate doApply(TrialRequestEntity requestParameter, DefaultActivityStrategyFactory.DynamicContext dynamicContext) throws Exception {
         log.info("拼团商品查询试算服务-NoMarketNode userId:{} requestParameter:{}", requestParameter.getUserId(), JSON.toJSONString(requestParameter));
 
         // 无营销配置
-        if (null == dynamicContext.getGroupBuyActivityDiscountVO() || null == dynamicContext.getSkuVO()) {
+        if (null == dynamicContext.getGoodsEntity() || null == dynamicContext.getDiscountEntity() || null == dynamicContext.getUserEntity() || null == dynamicContext.getActivityEntity()) {
             log.info("商品无拼团营销配置 {}", requestParameter.getGoodsId());
             throw new AppException(ResponseCode.E0002.getCode(), ResponseCode.E0002.getInfo());
         }
 
-        return TrialBalanceEntity.builder().build();
+        return TrialResponseAggerate.builder().build();
     }
 
     @Override
-    public StrategyHandler<MarketProductEntity, DefaultActivityStrategyFactory.DynamicContext, TrialBalanceEntity> get(MarketProductEntity requestParameter, DefaultActivityStrategyFactory.DynamicContext dynamicContext) throws Exception {
+    public StrategyHandler<TrialRequestEntity, DefaultActivityStrategyFactory.DynamicContext, TrialResponseAggerate> get(TrialRequestEntity requestParameter, DefaultActivityStrategyFactory.DynamicContext dynamicContext) throws Exception {
         return defaultStrategyHandler;
     }
 

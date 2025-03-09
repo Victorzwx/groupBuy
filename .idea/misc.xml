@@ -6,6 +6,11 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/group-buy-market-api/pom.xml" />
+        <option value="$PROJECT_DIR$/group-buy-market-app/pom.xml" />
+        <option value="$PROJECT_DIR$/group-buy-market-domain/pom.xml" />
+        <option value="$PROJECT_DIR$/group-buy-market-infrastructure/pom.xml" />
+        <option value="$PROJECT_DIR$/group-buy-market-trigger/pom.xml" />
+        <option value="$PROJECT_DIR$/group-buy-market-types/pom.xml" />
       </list>
     </option>
   </component>

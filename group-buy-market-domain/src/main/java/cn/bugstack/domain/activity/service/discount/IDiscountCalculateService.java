@@ -1,6 +1,7 @@
 package cn.bugstack.domain.activity.service.discount;
 
-import cn.bugstack.domain.activity.model.valobj.GroupBuyActivityDiscountVO;
+import cn.bugstack.domain.activity.model.entity.ActivityEntity;
+import cn.bugstack.domain.activity.model.entity.DiscountEntity;
 
 import java.math.BigDecimal;
 
@@ -19,6 +20,6 @@ public interface IDiscountCalculateService {
      * @param groupBuyDiscount 折扣计划配置
      * @return 商品优惠价格
      */
-    BigDecimal calculate(String userId, BigDecimal originalPrice, GroupBuyActivityDiscountVO.GroupBuyDiscount groupBuyDiscount);
+    BigDecimal calculate(String userId, BigDecimal originalPrice, DiscountEntity discountEntity, ActivityEntity activityEntity);
 
 }

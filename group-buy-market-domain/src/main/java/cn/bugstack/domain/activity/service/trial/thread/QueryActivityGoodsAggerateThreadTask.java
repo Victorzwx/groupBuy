@@ -1,7 +1,7 @@
 package cn.bugstack.domain.activity.service.trial.thread;
 
 import cn.bugstack.domain.activity.adapter.repository.IActivityRepository;
-import cn.bugstack.domain.activity.model.valobj.GroupBuyActivityDiscountVO;
+import cn.bugstack.domain.activity.model.aggregate.ActivityGoodsAggerate;
 import cn.bugstack.domain.activity.model.valobj.SCSkuActivityVO;
 
 import java.util.concurrent.Callable;
@@ -11,7 +11,7 @@ import java.util.concurrent.Callable;
  * @description 查询营销配置任务
  * @create 2024-12-21 09:46
  */
-public class QueryGroupBuyActivityDiscountVOThreadTask implements Callable<GroupBuyActivityDiscountVO> {
+public class QueryActivityGoodsAggerateThreadTask implements Callable<ActivityGoodsAggerate> {
 
     /**
      * 活动ID
@@ -38,7 +38,7 @@ public class QueryGroupBuyActivityDiscountVOThreadTask implements Callable<Group
      */
     private final IActivityRepository activityRepository;
 
-    public QueryGroupBuyActivityDiscountVOThreadTask(Long activityId, String source, String channel, String goodsId, IActivityRepository activityRepository) {
+    public QueryActivityGoodsAggerateThreadTask(Long activityId, String source, String channel, String goodsId, IActivityRepository activityRepository) {
         this.activityId = activityId;
         this.source = source;
         this.channel = channel;
@@ -47,7 +47,7 @@ public class QueryGroupBuyActivityDiscountVOThreadTask implements Callable<Group
     }
 
     @Override
-    public GroupBuyActivityDiscountVO call() throws Exception {
+    public ActivityGoodsAggerate call() throws Exception {
         // 判断是否存在可用的活动ID
         Long availableActivityId = activityId;
         if (null == activityId){
@@ -57,7 +57,7 @@ public class QueryGroupBuyActivityDiscountVOThreadTask implements Callable<Group
             availableActivityId = scSkuActivityVO.getActivityId();
         }
         // 查询活动配置
-        return activityRepository.queryGroupBuyActivityDiscountVO(availableActivityId);
+        return activityRepository.queryGroupBuyActivityDiscountAggerate(availableActivityId);
     }
 
 }

@@ -34,7 +34,7 @@ public abstract class AbstractMultiThreadStrategyRouter<T, D, R> implements Stra
     /**
      * 异步加载数据
      */
-    protected abstract void multiThread(T requestParameter, D dynamicContext) throws ExecutionException, InterruptedException, TimeoutException;
+    protected abstract void multiThread(T requestParameter, D dynamicContext) throws Exception;
 
     /**
      * 业务流程受理

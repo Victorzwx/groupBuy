@@ -1,5 +1,6 @@
 package cn.bugstack.infrastructure.dao;
 
+import cn.bugstack.domain.activity.model.entity.DiscountEntity;
 import cn.bugstack.infrastructure.dao.po.GroupBuyDiscount;
 import org.apache.ibatis.annotations.Mapper;
 

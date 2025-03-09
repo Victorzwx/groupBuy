@@ -25,7 +25,7 @@ public class GroupBuyActivity {
     /** 活动名称 */
     private String activityName;
     /** 折扣ID */
-    private String discountId;
+    private Long discountId;
     /** 拼团方式（0自动成团、1达成目标拼团） */
     private Integer groupType;
     /** 拼团次数限制 */

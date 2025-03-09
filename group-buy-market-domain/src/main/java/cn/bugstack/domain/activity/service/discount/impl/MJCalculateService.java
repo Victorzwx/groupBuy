@@ -1,8 +1,7 @@
 package cn.bugstack.domain.activity.service.discount.impl;
 
-import cn.bugstack.domain.activity.model.valobj.GroupBuyActivityDiscountVO;
+import cn.bugstack.domain.activity.model.entity.DiscountEntity;
 import cn.bugstack.domain.activity.service.discount.AbstractDiscountCalculateService;
-import cn.bugstack.domain.activity.service.discount.IDiscountCalculateService;
 import cn.bugstack.types.common.Constants;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -19,11 +18,11 @@ import java.math.BigDecimal;
 public class MJCalculateService extends AbstractDiscountCalculateService {
 
     @Override
-    public BigDecimal doCalculate(BigDecimal originalPrice, GroupBuyActivityDiscountVO.GroupBuyDiscount groupBuyDiscount) {
-        log.info("优惠策略折扣计算:{}", groupBuyDiscount.getDiscountType().getCode());
+    public BigDecimal doCalculate(BigDecimal originalPrice, DiscountEntity discountEntity) {
+        log.info("优惠策略折扣计算:{}", discountEntity.getDiscountType().getCode());
 
         // 折扣表达式 - 100,10 满100减10元
-        String marketExpr = groupBuyDiscount.getMarketExpr();
+        String marketExpr = discountEntity.getMarketExpr();
         String[] split = marketExpr.split(Constants.SPLIT);
         BigDecimal x = new BigDecimal(split[0].trim());
         BigDecimal y = new BigDecimal(split[1].trim());

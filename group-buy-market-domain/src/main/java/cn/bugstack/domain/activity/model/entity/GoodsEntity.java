@@ -1,28 +1,30 @@
-package cn.bugstack.domain.activity.model.valobj;
+package cn.bugstack.domain.activity.model.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.Getter;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 
-/**
- * @author Fuzhengwei bugstack.cn @小傅哥
- * @description 商品信息
- * @create 2024-12-21 10:45
- */
-@Getter
+@Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class SkuVO {
-
+public class GoodsEntity {
     /** 商品ID */
     private String goodsId;
     /** 商品名称 */
     private String goodsName;
+    /** 渠道 */
+    private String source;
+    /** 来源 */
+    private String chanel;
     /** 原始价格 */
     private BigDecimal originalPrice;
+    // 折扣金额
+    private BigDecimal deductionPrice;
+    // 支付金额
+    private BigDecimal payPrice;
 
 }

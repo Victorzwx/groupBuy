@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class MarketProductEntity {
+public class TrialRequestEntity {
 
     /** 活动ID */
     private Long activityId;

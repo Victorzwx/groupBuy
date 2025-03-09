@@ -1,25 +1,22 @@
-package cn.bugstack.domain.activity.model.valobj;
+package cn.bugstack.domain.activity.model.entity;
 
+import cn.bugstack.domain.activity.model.valobj.TagScopeEnumVO;
 import cn.bugstack.types.common.Constants;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.Getter;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.Date;
 import java.util.Objects;
 
-/**
- * @author Fuzhengwei bugstack.cn @小傅哥
- * @description 拼团活动营销配置值对象
- * @create 2024-12-21 09:39
- */
-@Getter
+@Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class GroupBuyActivityDiscountVO {
+public class ActivityEntity {
+
 
     /**
      * 活动ID
@@ -29,22 +26,9 @@ public class GroupBuyActivityDiscountVO {
      * 活动名称
      */
     private String activityName;
-    /**
-     * 来源
-     */
-    private String source;
-    /**
-     * 渠道
-     */
-    private String channel;
-    /**
-     * 商品ID
-     */
-    private String goodsId;
-    /**
-     * 折扣配置
-     */
-    private GroupBuyDiscount groupBuyDiscount;
+
+    private Long discountId;
+
     /**
      * 拼团方式（0自动成团、1达成目标拼团）
      */
@@ -82,6 +66,11 @@ public class GroupBuyActivityDiscountVO {
      */
     private String tagScope;
 
+    /** 是否可见拼团 */
+    private Boolean isVisible;
+    /** 是否可参与进团 */
+    private Boolean isEnable;
+
     /**
      * 可见限制
      * 只要存在这样一个值，那么首次获得的默认值就是 false
@@ -89,8 +78,7 @@ public class GroupBuyActivityDiscountVO {
     public boolean isVisible() {
         if(StringUtils.isBlank(this.tagScope)) return TagScopeEnumVO.VISIBLE.getAllow();
 
-
-        if(Objects.equals(this.tagScope.charAt(0),'1')){
+        if (Objects.equals(this.tagScope.charAt(0),'1')) {
             return TagScopeEnumVO.VISIBLE.getRefuse();
         }
         return TagScopeEnumVO.VISIBLE.getAllow();
@@ -101,48 +89,11 @@ public class GroupBuyActivityDiscountVO {
      * 只要存在这样一个值，那么首次获得的默认值就是 false
      */
     public boolean isEnable() {
-        if(StringUtils.isBlank(this.tagScope)) return TagScopeEnumVO.ENABLE.getAllow();
+        if(StringUtils.isBlank(this.tagScope)) return TagScopeEnumVO.VISIBLE.getAllow();
 
-        if(Objects.equals(this.tagScope.charAt(1),'1')){
+        if (Objects.equals(this.tagScope.charAt(1),'1')) {
             return TagScopeEnumVO.ENABLE.getRefuse();
         }
         return TagScopeEnumVO.ENABLE.getAllow();
     }
-
-    @Getter
-    @Builder
-    @AllArgsConstructor
-    @NoArgsConstructor
-    public static class GroupBuyDiscount {
-        /**
-         * 折扣标题
-         */
-        private String discountName;
-
-        /**
-         * 折扣描述
-         */
-        private String discountDesc;
-
-        /**
-         * 折扣类型（0:base、1:tag）
-         */
-        private DiscountTypeEnum discountType;
-
-        /**
-         * 营销优惠计划（ZJ:直减、MJ:满减、N元购）
-         */
-        private String marketPlan;
-
-        /**
-         * 营销优惠表达式
-         */
-        private String marketExpr;
-
-        /**
-         * 人群标签，特定优惠限定
-         */
-        private String tagId;
-    }
-
 }

@@ -167,7 +167,7 @@ public class TradeRepository implements ITradeRepository {
         return GroupBuyActivityEntity.builder()
                 .activityId(groupBuyActivity.getActivityId())
                 .activityName(groupBuyActivity.getActivityName())
-                .discountId(groupBuyActivity.getDiscountId())
+                .discountId(String.valueOf(groupBuyActivity.getDiscountId()))
                 .groupType(groupBuyActivity.getGroupType())
                 .takeLimitCount(groupBuyActivity.getTakeLimitCount())
                 .target(groupBuyActivity.getTarget())

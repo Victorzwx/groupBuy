@@ -121,15 +121,14 @@ public class TradeSettlementOrderService implements ITradeSettlementOrderService
                 }
             } else if (NotifyTaskHTTPEnumVO.ERROR.getCode().equals(response)) {
                 if (notifyTask.getNotifyCount() < 5) {
-
-                    int updateCount = repository.updateNotifyTaskStatusRetry(notifyTask.getTeamId());
-                    if (1 == updateCount) {
-                        retryCount += 1;
-                    }
-                } else {
                     int updateCount = repository.updateNotifyTaskStatusError(notifyTask.getTeamId());
                     if (1 == updateCount) {
                         errorCount += 1;
+                    }
+                } else {
+                    int updateCount = repository.updateNotifyTaskStatusRetry(notifyTask.getTeamId());
+                    if (1 == updateCount) {
+                        retryCount += 1;
                     }
                 }
             }

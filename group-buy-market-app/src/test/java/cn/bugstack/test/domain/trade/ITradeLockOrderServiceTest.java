@@ -1,8 +1,7 @@
 package cn.bugstack.test.domain.trade;
 
-import cn.bugstack.domain.activity.model.entity.MarketProductEntity;
-import cn.bugstack.domain.activity.model.entity.TrialBalanceEntity;
-import cn.bugstack.domain.activity.model.valobj.GroupBuyActivityDiscountVO;
+import cn.bugstack.domain.activity.model.aggregate.TrialResponseAggerate;
+import cn.bugstack.domain.activity.model.entity.*;
 import cn.bugstack.domain.activity.service.IIndexGroupBuyMarketService;
 import cn.bugstack.domain.trade.model.entity.MarketPayOrderEntity;
 import cn.bugstack.domain.trade.model.entity.PayActivityEntity;
@@ -45,7 +44,7 @@ public class ITradeLockOrderServiceTest {
         String outTradeNo = "909000098111";
 
         // 1. 获取试算优惠，有【activityId】优先使用
-        TrialBalanceEntity trialBalanceEntity = indexGroupBuyMarketService.indexMarketTrial(MarketProductEntity.builder()
+        TrialResponseAggerate trialResponseAggerate = indexGroupBuyMarketService.indexMarketTrial(TrialRequestEntity.builder()
                 .userId(userId)
                 .source(source)
                 .channel(channel)
@@ -53,7 +52,8 @@ public class ITradeLockOrderServiceTest {
                 .activityId(activityId)
                 .build());
 
-        GroupBuyActivityDiscountVO groupBuyActivityDiscountVO = trialBalanceEntity.getGroupBuyActivityDiscountVO();
+        ActivityEntity activityEntity = trialResponseAggerate.getActivityEntity();
+        GoodsEntity goodsEntity = trialResponseAggerate.getGoodsEntity();
 
         // 查询 outTradeNo 是否已经存在交易记录
         MarketPayOrderEntity marketPayOrderEntityOld = tradeOrderService.queryNoPayMarketPayOrderByOutTradeNo(userId, outTradeNo);
@@ -67,19 +67,19 @@ public class ITradeLockOrderServiceTest {
                 UserEntity.builder().userId(userId).build(),
                 PayActivityEntity.builder()
                         .teamId(null)
-                        .activityId(groupBuyActivityDiscountVO.getActivityId())
-                        .activityName(groupBuyActivityDiscountVO.getActivityName())
-                        .startTime(groupBuyActivityDiscountVO.getStartTime())
-                        .endTime(groupBuyActivityDiscountVO.getEndTime())
-                        .targetCount(groupBuyActivityDiscountVO.getTarget())
+                        .activityId(activityEntity.getActivityId())
+                        .activityName(activityEntity.getActivityName())
+                        .startTime(activityEntity.getStartTime())
+                        .endTime(activityEntity.getEndTime())
+                        .targetCount(activityEntity.getTarget())
                         .build(),
                 PayDiscountEntity.builder()
                         .source(source)
                         .channel(channel)
                         .goodsId(goodsId)
-                        .goodsName(trialBalanceEntity.getGoodsName())
-                        .originalPrice(trialBalanceEntity.getOriginalPrice())
-                        .deductionPrice(trialBalanceEntity.getDeductionPrice())
+                        .goodsName(goodsEntity.getGoodsName())
+                        .originalPrice(goodsEntity.getOriginalPrice())
+                        .deductionPrice(goodsEntity.getDeductionPrice())
                         .outTradeNo(outTradeNo)
                         .build());
 

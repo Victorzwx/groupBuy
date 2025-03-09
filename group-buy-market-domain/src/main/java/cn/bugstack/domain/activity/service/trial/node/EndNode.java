@@ -1,17 +1,13 @@
 package cn.bugstack.domain.activity.service.trial.node;
 
-import cn.bugstack.domain.activity.model.entity.MarketProductEntity;
-import cn.bugstack.domain.activity.model.entity.TrialBalanceEntity;
-import cn.bugstack.domain.activity.model.valobj.GroupBuyActivityDiscountVO;
-import cn.bugstack.domain.activity.model.valobj.SkuVO;
+import cn.bugstack.domain.activity.model.aggregate.TrialResponseAggerate;
+import cn.bugstack.domain.activity.model.entity.*;
 import cn.bugstack.domain.activity.service.trial.AbstractGroupBuyMarketSupport;
 import cn.bugstack.domain.activity.service.trial.factory.DefaultActivityStrategyFactory;
 import cn.bugstack.types.design.framework.tree.StrategyHandler;
 import com.alibaba.fastjson.JSON;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
-
-import java.math.BigDecimal;
 
 /**
  * @author Fuzhengwei bugstack.cn @小傅哥
@@ -20,41 +16,30 @@ import java.math.BigDecimal;
  */
 @Slf4j
 @Service
-public class EndNode extends AbstractGroupBuyMarketSupport<MarketProductEntity, DefaultActivityStrategyFactory.DynamicContext, TrialBalanceEntity> {
+public class EndNode extends AbstractGroupBuyMarketSupport<TrialRequestEntity, DefaultActivityStrategyFactory.DynamicContext, TrialResponseAggerate> {
 
     @Override
-    public TrialBalanceEntity doApply(MarketProductEntity requestParameter, DefaultActivityStrategyFactory.DynamicContext dynamicContext) throws Exception {
+    public TrialResponseAggerate doApply(TrialRequestEntity requestParameter, DefaultActivityStrategyFactory.DynamicContext dynamicContext) throws Exception {
         log.info("拼团商品查询试算服务-EndNode userId:{} requestParameter:{}", requestParameter.getUserId(), JSON.toJSONString(requestParameter));
 
-        // 拼团活动配置
-        GroupBuyActivityDiscountVO groupBuyActivityDiscountVO = dynamicContext.getGroupBuyActivityDiscountVO();
 
-        // 商品信息
-        SkuVO skuVO = dynamicContext.getSkuVO();
-
-        // 折扣金额
-        BigDecimal deductionPrice = dynamicContext.getDeductionPrice();
-        // 支付金额
-        BigDecimal payPrice = dynamicContext.getPayPrice();
+        // 获取上下文数据
+        ActivityEntity activityEntity = dynamicContext.getActivityEntity();
+        DiscountEntity discountEntity = dynamicContext.getDiscountEntity();
+        GoodsEntity goodsEntity = dynamicContext.getGoodsEntity();
+        UserEntity userEntity = dynamicContext.getUserEntity();
 
         // 返回空结果
-        return TrialBalanceEntity.builder()
-                .goodsId(skuVO.getGoodsId())
-                .goodsName(skuVO.getGoodsName())
-                .originalPrice(skuVO.getOriginalPrice())
-                .deductionPrice(deductionPrice)
-                .payPrice(payPrice)
-                .targetCount(groupBuyActivityDiscountVO.getTarget())
-                .startTime(groupBuyActivityDiscountVO.getStartTime())
-                .endTime(groupBuyActivityDiscountVO.getEndTime())
-                .isVisible(dynamicContext.isVisible())
-                .isEnable(dynamicContext.isEnable())
-                .groupBuyActivityDiscountVO(groupBuyActivityDiscountVO)
+        return TrialResponseAggerate.builder()
+                .discountEntity(discountEntity)
+                .goodsEntity(goodsEntity)
+                .activityEntity(activityEntity)
+                .userEntity(userEntity)
                 .build();
     }
 
     @Override
-    public StrategyHandler<MarketProductEntity, DefaultActivityStrategyFactory.DynamicContext, TrialBalanceEntity> get(MarketProductEntity requestParameter, DefaultActivityStrategyFactory.DynamicContext dynamicContext) throws Exception {
+    public StrategyHandler<TrialRequestEntity, DefaultActivityStrategyFactory.DynamicContext, TrialResponseAggerate> get(TrialRequestEntity requestParameter, DefaultActivityStrategyFactory.DynamicContext dynamicContext) throws Exception {
         return defaultStrategyHandler;
     }
 

@@ -1,1 +1,1 @@
-docker stop group-buy
+docker stop group-buy-market

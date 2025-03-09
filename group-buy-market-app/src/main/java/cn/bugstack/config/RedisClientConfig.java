@@ -46,7 +46,6 @@ public class RedisClientConfig {
                 .setRetryInterval(properties.getRetryInterval())
                 .setPingConnectionInterval(properties.getPingInterval())
                 .setKeepAlive(properties.isKeepAlive())
-                .setDatabase(properties.getDatabase())
         ;
 
         return Redisson.create(config);

@@ -1,5 +1,6 @@
 package cn.bugstack.infrastructure.dao;
 
+import cn.bugstack.domain.activity.model.entity.GoodsEntity;
 import cn.bugstack.infrastructure.dao.po.Sku;
 import org.apache.ibatis.annotations.Mapper;
 

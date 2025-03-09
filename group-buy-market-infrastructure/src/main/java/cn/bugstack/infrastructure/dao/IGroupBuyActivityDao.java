@@ -1,5 +1,6 @@
 package cn.bugstack.infrastructure.dao;
 
+import cn.bugstack.domain.activity.model.entity.ActivityEntity;
 import cn.bugstack.infrastructure.dao.po.GroupBuyActivity;
 import org.apache.ibatis.annotations.Mapper;
 

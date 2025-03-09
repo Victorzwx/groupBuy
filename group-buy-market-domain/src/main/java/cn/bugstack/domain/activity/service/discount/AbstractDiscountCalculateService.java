@@ -1,8 +1,9 @@
 package cn.bugstack.domain.activity.service.discount;
 
 import cn.bugstack.domain.activity.adapter.repository.IActivityRepository;
+import cn.bugstack.domain.activity.model.entity.ActivityEntity;
+import cn.bugstack.domain.activity.model.entity.DiscountEntity;
 import cn.bugstack.domain.activity.model.valobj.DiscountTypeEnum;
-import cn.bugstack.domain.activity.model.valobj.GroupBuyActivityDiscountVO;
 import lombok.extern.slf4j.Slf4j;
 
 import javax.annotation.Resource;
@@ -20,17 +21,17 @@ public abstract class AbstractDiscountCalculateService implements IDiscountCalcu
     protected IActivityRepository repository;
 
     @Override
-    public BigDecimal calculate(String userId, BigDecimal originalPrice, GroupBuyActivityDiscountVO.GroupBuyDiscount groupBuyDiscount) {
+    public BigDecimal calculate(String userId, BigDecimal originalPrice, DiscountEntity discountEntity, ActivityEntity activityEntity) {
         // 1. 人群标签过滤
-        if (DiscountTypeEnum.TAG.equals(groupBuyDiscount.getDiscountType())){
-            boolean isCrowdRange = filterTagId(userId, groupBuyDiscount.getTagId());
+        if (DiscountTypeEnum.TAG.equals(discountEntity.getDiscountType())){
+            boolean isCrowdRange = filterTagId(userId, activityEntity.getTagId());
             if (!isCrowdRange) {
                 log.info("折扣优惠计算拦截，用户不再优惠人群标签范围内 userId:{}", userId);
                 return originalPrice;
             }
         }
         // 2. 折扣优惠计算
-        return doCalculate(originalPrice, groupBuyDiscount);
+        return doCalculate(originalPrice, discountEntity);
     }
 
     // 人群过滤 - 限定人群优惠
@@ -38,6 +39,6 @@ public abstract class AbstractDiscountCalculateService implements IDiscountCalcu
         return repository.isTagCrowdRange(tagId, userId);
     }
 
-    protected abstract BigDecimal doCalculate(BigDecimal originalPrice, GroupBuyActivityDiscountVO.GroupBuyDiscount groupBuyDiscount);
+    protected abstract BigDecimal doCalculate(BigDecimal originalPrice, DiscountEntity discountEntity);
 
 }
