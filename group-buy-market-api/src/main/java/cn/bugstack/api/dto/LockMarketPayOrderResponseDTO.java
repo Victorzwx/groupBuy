@@ -22,6 +22,8 @@ public class LockMarketPayOrderResponseDTO {
     private String orderId;
     /** 折扣金额 */
     private BigDecimal deductionPrice;
+    /** 支付金额 */
+    private BigDecimal payPrice;
     /** 交易订单状态 */
     private Integer tradeOrderStatus;
 

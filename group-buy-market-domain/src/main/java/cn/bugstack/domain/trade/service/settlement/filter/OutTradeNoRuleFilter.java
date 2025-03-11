@@ -29,7 +29,7 @@ public class OutTradeNoRuleFilter implements ILogicHandler<TradeSettlementRuleCo
     public TradeSettlementRuleFilterBackEntity apply(TradeSettlementRuleCommandEntity requestParameter, TradeSettlementRuleFilterFactory.DynamicContext dynamicContext) throws Exception {
         log.info("结算规则过滤-外部单号校验{} outTradeNo:{}", requestParameter.getUserId(), requestParameter.getOutTradeNo());
 
-        // 查询拼团信息
+        // 查询订单信息
         MarketPayOrderEntity marketPayOrderEntity = repository.queryMarketPayOrderEntityByOutTradeNo(requestParameter.getUserId(), requestParameter.getOutTradeNo());
 
         if (null == marketPayOrderEntity) {
