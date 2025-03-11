@@ -28,7 +28,7 @@ public class ITagServiceTest {
 
     @Test
     public void test_tag_job() {
-        tagService.execTagBatchJob("1", "10001");
+        tagService.execTagBatchJob("RQ_KJHKL98UU78H66554GFDV", "10001");
     }
 
     @Test
