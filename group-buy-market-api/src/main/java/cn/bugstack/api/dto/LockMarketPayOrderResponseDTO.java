@@ -20,6 +20,8 @@ public class LockMarketPayOrderResponseDTO {
 
     /** 预购订单ID */
     private String orderId;
+    /** 原始金额 */
+    private BigDecimal originalPrice;
     /** 折扣金额 */
     private BigDecimal deductionPrice;
     /** 支付金额 */

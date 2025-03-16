@@ -228,6 +228,7 @@ public class ActivityRepository implements IActivityRepository {
                     .lockCount(groupBuyOrder.getLockCount())
                     .validStartTime(groupBuyOrder.getValidStartTime())
                     .validEndTime(groupBuyOrder.getValidEndTime())
+                    .outTradeNo(groupBuyOrderList.getOutTradeNo())
                     .build();
 
             userGroupBuyOrderDetailEntities.add(userGroupBuyOrderDetailEntity);

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>拼团营销交易系统</title>
+    <link rel="stylesheet" href="css/web.css">
+    <style>
+        .empty-tip {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            font-size: 14px;
+            border: 1px dashed #eee;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+<div class="main-container">
+    <!-- 轮播图 -->
+    <div class="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item">
+                <img src="images/1.jpg" alt="商品图">
+            </div>
+            <div class="carousel-item">
+                <img src="images/2.jpg" alt="商品图">
+            </div>
+            <div class="carousel-item">
+                <img src="images/3.jpg" alt="商品图">
+            </div>
+        </div>
+    </div>
+
+    <!-- 商品详情 -->
+    <div class="product-info">
+        <h1 class="product-title">机械键盘（青轴）电竞版</h1>
+        <div class="promotion-tag">🔥 爆款直降 ¥<span id="deductionPrice"></span> | 已有<span id="allTeamUserCount"></span>人抢购成功</div>
+
+        <div class="group-list" id="groupList">
+            <!-- 此处内容由JavaScript动态生成 -->
+        </div>
+
+        <div class="action-buttons">
+            <button class="btn btn-buy">单独购买 ¥<span id="originalPrice"></span></button>
+            <button class="btn btn-group">发起拼团 ¥<span id="payPrice"></span></button>
+        </div>
+    </div>
+
+
+    <!-- 登录弹窗 -->
+    <div class="login-mask">
+        <div class="login-modal">
+            <button class="close-btn">&times;</button>
+            <div class="modal-header">
+                <h2 class="modal-title">微信扫码登录</h2>
+                <p class="modal-subtitle">安全快捷登录</p>
+            </div>
+            <div class="qr-container">
+                <div class="loading">
+                    <div class="spinner"></div>
+                    二维码加载中...
+                </div>
+                <div class="qr-code-wrapper">
+                    <img id="qrCodeImg" class="qr-image"
+                         src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                         alt="微信登录二维码">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <p class="tips">打开手机微信扫一扫，扫码后自动登录</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+<script src="js/web.js"></script>
+</body>
+</html>
