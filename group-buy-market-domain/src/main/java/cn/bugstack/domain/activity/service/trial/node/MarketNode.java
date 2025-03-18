@@ -43,6 +43,7 @@ public class MarketNode extends AbstractGroupBuyMarketSupport<TrialRequestEntity
 
     @Override
     protected void multiThread(TrialRequestEntity requestParameter, DefaultActivityStrategyFactory.DynamicContext dynamicContext) throws Exception {
+
         // 异步查询活动配置
         QueryActivityGoodsAggerateThreadTask queryActivityGoodsAggerateThreadTask = new QueryActivityGoodsAggerateThreadTask(requestParameter.getActivityId(), requestParameter.getSource(), requestParameter.getChannel(), requestParameter.getGoodsId(), repository);
         FutureTask<ActivityGoodsAggerate> activityDiscountAggerateFutureTask = new FutureTask<>(queryActivityGoodsAggerateThreadTask);

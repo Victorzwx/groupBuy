@@ -12,6 +12,30 @@ thread:
         block-queue-size: 5000 # 队列大小
         policy: CallerRunsPolicy # 拒绝策略
 
+
+
+# 动态线程池管理配置
+dynamic:
+  thread:
+    pool:
+      config:
+        # 状态；true = 开启、false 关闭
+        enabled: true
+        # redis host
+        host: 117.72.40.24
+        # redis port
+        port: 16379
+        database: 1
+        pool-size: 10
+        min-idle-size: 5
+        idle-timeout: 30000
+        connect-timeout: 5000
+        retry-attempts: 3
+        retry-interval: 1000
+        ping-interval: 60000
+        keep-alive: true
+
+
 # 数据库配置；启动时配置数据库资源信息
 spring:
   datasource:
@@ -45,17 +69,17 @@ logging:
 
 
 # Redis
-redis:
-  sdk:
-    config:
-      host: 117.72.40.24
-      port: 16379
-      database: 1
-      pool-size: 10
-      min-idle-size: 5
-      idle-timeout: 30000
-      connect-timeout: 5000
-      retry-attempts: 3
-      retry-interval: 1000
-      ping-interval: 60000
-      keep-alive: true
+#redis:
+#  sdk:
+#    config:
+#      host: 117.72.40.24
+#      port: 16379
+#      database: 1
+#      pool-size: 10
+#      min-idle-size: 5
+#      idle-timeout: 30000
+#      connect-timeout: 5000
+#      retry-attempts: 3
+#      retry-interval: 1000
+#      ping-interval: 60000
+#      keep-alive: true
