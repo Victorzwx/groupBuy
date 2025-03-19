@@ -1,5 +1,5 @@
 spring:
-  application:
-    name: group-buy-market-app
+#  application:
+#    name: group-buy-market-app
   profiles:
     active: dev

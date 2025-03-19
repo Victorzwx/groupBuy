@@ -34,6 +34,8 @@ dynamic:
         retry-interval: 1000
         ping-interval: 60000
         keep-alive: true
+        applicationName: group-buy-market-app
+
 
 
 # 数据库配置；启动时配置数据库资源信息
