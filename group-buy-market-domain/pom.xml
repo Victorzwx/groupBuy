@@ -47,6 +47,7 @@
             <version>1.0</version>
         </dependency>
 
+
         <!-- 系统模块 -->
         <dependency>
             <groupId>cn.bugstack</groupId>

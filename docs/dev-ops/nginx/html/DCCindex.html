@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Dynamic Control Center「动态配置中心」</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --success-color: #27ae60;
+            --border-radius: 8px;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            margin: 0;
+            padding: 2rem;
+            background: #f0f4f8;
+            color: var(--primary-color);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .section-header {
+            padding: 1.5rem 2rem;
+            background: var(--primary-color);
+            color: white;
+            margin: 0;
+        }
+
+        .table-container {
+            padding: 0 2rem 2rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            background: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ecf0f1;
+        }
+
+        th {
+            background: #f8f9fa;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        tr:hover {
+            background-color: #f8f9fa;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        button {
+            padding: 6px 12px;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s;
+            background: var(--secondary-color);
+            color: white;
+        }
+
+        button:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
+        }
+
+        .toolbar {
+            padding: 1rem 2rem;
+            background: white;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            gap: 1rem;
+        }
+
+        /* 模态框样式优化 */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            width: 400px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .modal h3 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2 class="section-header">动态配置管理中心</h2>
+
+    <div class="toolbar">
+        <button id="autoRefreshBtn">自动刷新</button>
+        <button id="stopAutoRefreshBtn" style="display:none;">停止刷新</button>
+    </div>
+
+    <!-- 动态线程池表格 -->
+    <div class="table-container">
+        <h3>动态线程池配置</h3>
+        <table id="threadPoolList">
+            <thead>
+            <tr>
+                <th>应用名称</th>
+                <th>线程池名称</th>
+                <th>核心线程数</th>
+                <th>最大线程数</th>
+                <th>活跃线程</th>
+                <th>当前线程</th>
+                <th>队列类型</th>
+                <th>队列任务</th>
+                <th>剩余容量</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <!-- 动态参数配置表格 -->
+    <div class="table-container">
+        <h3>动态参数配置</h3>
+        <table id="dynamicConfigList">
+            <thead>
+            <tr>
+                <th>应用名称</th>
+                <th>参数名称</th>
+                <th>参数值</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+</div>
+
+<!-- 模态框（Modal） -->
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>修改线程池参数</h2>
+        <form id="configForm">
+            <label for="appName">应用名称:</label><br>
+            <input type="text" id="appName" name="appName" readonly><br>
+            <label for="threadPoolName">线程池名称:</label><br>
+            <input type="text" id="threadPoolName" name="threadPoolName" readonly><br>
+            <label for="corePoolSize">核心线程池数:</label><br>
+            <input type="number" id="corePoolSize" name="corePoolSize"><br>
+            <label for="maximumPoolSize">最大线程数:</label><br>
+            <input type="number" id="maximumPoolSize" name="maximumPoolSize"><br>
+            <button type="button" onclick="updateConfig()">确认修改</button>
+        </form>
+    </div>
+</div>
+
+<!-- 参数修改模态框 -->
+<div id="paramModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeParamModal()">&times;</span>
+        <h3>修改参数配置</h3>
+        <form id="paramForm">
+            <label>应用名称:</label>
+            <input type="text" id="paramAppName" readonly>
+
+            <label>参数名称:</label>
+            <input type="text" id="paramKey" readonly>
+
+            <label>新参数值:</label>
+            <input type="text" id="paramValue" required>
+
+            <button type="button" onclick="submitParamUpdate()">确认修改</button>
+        </form>
+    </div>
+</div>
+
+
+<script>
+    // DOM加载完成后执行初始化操作
+    document.addEventListener('DOMContentLoaded', function() {
+        // 获取自动刷新控制按钮元素
+        const autoRefreshBtn = document.getElementById('autoRefreshBtn');
+        const stopAutoRefreshBtn = document.getElementById('stopAutoRefreshBtn');
+        let autoRefreshInterval; // 自动刷新定时器
+
+        // 自动刷新按钮点击事件
+        autoRefreshBtn.addEventListener('click', () => {
+            if (!autoRefreshInterval) {
+                // 设置定时器每3秒刷新数据
+                autoRefreshInterval = setInterval(() => {
+                    fetchThreadPoolList();    // 获取线程池数据
+                    fetchDynamicConfig();     // 获取动态参数配置
+                }, 3000);
+                toggleRefreshButtons();       // 切换按钮显示状态[2,4](@ref)
+            }
+        });
+
+        // 停止刷新按钮点击事件
+        stopAutoRefreshBtn.addEventListener('click', () => {
+            clearInterval(autoRefreshInterval); // 清除定时器
+            autoRefreshInterval = null;
+            autoRefreshBtn.style.display = 'inline';
+            stopAutoRefreshBtn.style.display = 'none';
+            //toggleRefreshButtons();             // 恢复按钮初始状态
+        });
+
+        // 页面初始化时加载数据
+        fetchThreadPoolList();
+        fetchDynamicConfig();
+    });
+
+    // 获取线程池数据
+    function fetchThreadPoolList() {
+        fetch('http://localhost:8089/api/v1/dynamic/thread/pool/query_thread_pool_list', {
+            headers: { 'User-Agent': 'Apifox/1.0.0' } // 模拟Apifox请求头
+        })
+            .then(response => response.json())  // 解析JSON响应
+            .then(data => {
+                if (data.code === "0000") {      // 判断接口返回码
+                    renderThreadPoolTable(data.data); // 渲染线程池表格
+                }
+            });
+    }
+
+    // 获取动态参数配置
+    function fetchDynamicConfig() {
+        fetch('http://127.0.0.1:8089/api/v1/dynamic/thread/pool/dcc_value', {
+            headers: { 'User-Agent': 'Apifox/1.0.0' }
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.code === "0000") {
+                    renderDynamicConfigTable(data.data); // 渲染动态参数表格
+                }
+            });
+    }
+
+    // 渲染线程池表格
+    function renderThreadPoolTable(data) {
+        const tbody = document.querySelector('#threadPoolList tbody');
+        // 生成表格HTML内容
+        tbody.innerHTML = Object.entries(data).map(([appName, pools]) =>
+            pools.map(pool => `
+            <tr>
+                <td>${pool.appName}</td>          <!-- 应用名称 -->
+                <td>${pool.threadPoolName}</td>  <!-- 线程池名称 -->
+                <td>${pool.corePoolSize}</td>    <!-- 核心线程数 -->
+                <td>${pool.maximumPoolSize}</td> <!-- 最大线程数 -->
+                <td>${pool.activeCount}</td>     <!-- 活跃线程数 -->
+                <td>${pool.poolSize}</td>        <!-- 当前线程数 -->
+                <td>${pool.queueType}</td>       <!-- 队列类型 -->
+                <td>${pool.queueSize}</td>       <!-- 队列任务数 -->
+                <td>${pool.remainingCapacity}</td><!-- 剩余容量 -->
+                <td>
+                    <button onclick="openThreadPoolModal('${pool.appName}', '${pool.threadPoolName}', ${pool.corePoolSize}, ${pool.maximumPoolSize})">
+                        修改
+                    </button>
+                </td>
+            </tr>
+        `).join('') // 将数组转换为字符串
+        ).join('');
+    }
+
+    // 渲染动态参数表格
+    function renderDynamicConfigTable(data) {
+        const tbody = document.querySelector('#dynamicConfigList tbody');
+        tbody.innerHTML = Object.entries(data).map(([appName, params]) =>
+            params.map(param => {
+                // 解析参数格式：DCC_POOL_REDIS_TOPIC_downgradeSwitch:0
+                const [keyValue, value] = param.split(':');
+                const key = keyValue.split('_').pop(); // 提取参数名
+                return `
+                <tr>
+                    <td>${appName}</td>          <!-- 应用名称 -->
+                    <td>${key}</td>              <!-- 参数名称 -->
+                    <td>${value}</td>            <!-- 参数值 -->
+                    <td>
+                        <button onclick="openParamModal('${appName}', '${key}', '${value}')">
+                            修改
+                        </button>
+                    </td>
+                </tr>
+            `;
+            }).join('')
+        ).join('');
+    }
+
+    // 打开参数修改模态框
+    function openParamModal(appName, key, value) {
+        const modal = document.getElementById('paramModal');
+        // 填充表单数据
+        document.getElementById('paramAppName').value = appName;
+        document.getElementById('paramKey').value = key;
+        document.getElementById('paramValue').value = value;
+        modal.style.display = 'flex'; // 显示模态框[13](@ref)
+    }
+
+    function openThreadPoolModal(appName, threadPoolName, corePoolSize,maximumPoolSize) {
+        const modal = document.getElementById('myModal');
+        // 填充表单数据
+        document.getElementById('appName').value = appName;
+        document.getElementById('threadPoolName').value = threadPoolName;
+        document.getElementById('corePoolSize').value = corePoolSize;
+        document.getElementById('maximumPoolSize').value = maximumPoolSize;
+        modal.style.display = 'flex'; // 显示模态框[13](@ref)
+    }
+
+    // 提交参数更新
+    function submitParamUpdate() {
+        const appName = document.getElementById('paramAppName').value;
+        const key = document.getElementById('paramKey').value;
+        const value = document.getElementById('paramValue').value;
+
+        // 发送更新请求
+        fetch(`http://127.0.0.1:8089/api/v1/dynamic/thread/pool/update_config?applicationName=${appName}&key=${key}&value=${value}`, {
+            headers: { 'User-Agent': 'Apifox/1.0.0' }
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.code === "0000") { // 判断更新结果
+                    alert('参数更新成功');
+                    closeParamModal();      // 关闭模态框
+                    fetchDynamicConfig();   // 刷新动态参数表格[19](@ref)
+                }
+            });
+    }
+
+    // 关闭参数模态框
+    function closeParamModal() {
+        document.getElementById('paramModal').style.display = 'none';
+    }
+
+    // 需要补充的函数
+    function toggleRefreshButtons() {
+        autoRefreshBtn.style.display = 'none';
+        stopAutoRefreshBtn.style.display = 'inline';
+    }
+
+
+
+
+    // 更新配置
+    function updateConfig() {
+        var appName = document.getElementById('appName').value;
+        var threadPoolName = document.getElementById('threadPoolName').value;
+        var corePoolSize = document.getElementById('corePoolSize').value;
+        var maximumPoolSize = document.getElementById('maximumPoolSize').value;
+
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', 'http://localhost:8089/api/v1/dynamic/thread/pool/update_thread_pool_config', true);
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.onload = function() {
+            if (xhr.status >= 200 && xhr.status < 300) {
+                var response = JSON.parse(xhr.responseText);
+                if (response.code === "0000") {
+                    alert('参数更新成功');
+                    closeModal();      // 关闭模态框
+                    fetchThreadPoolList(); // 重新加载线程池列表
+                } else {
+                    alert('更新失败: ' + response.info);
+                }
+            } else {
+                alert('Failed to update configuration!');
+            }
+        };
+        xhr.onerror = function() {
+            alert('Failed to update configuration!');
+        };
+        xhr.send(JSON.stringify({
+            appName: appName,
+            threadPoolName: threadPoolName,
+            corePoolSize: parseInt(corePoolSize, 10),
+            maximumPoolSize: parseInt(maximumPoolSize, 10)
+        }));
+    }
+
+    // 关闭参数模态框
+    function closeModal() {
+        document.getElementById('myModal').style.display = 'none';
+    }
+
+</script>
+</body>
+</html>
