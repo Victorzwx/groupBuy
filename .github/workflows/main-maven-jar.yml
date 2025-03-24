@@ -36,18 +36,18 @@ jobs:
       - name: Download openai-code-review-sdk JAR
         run: wget -O ./libs/openai-code-review-sdk-1.0.jar https://github.com/Victorzwx/groupBuy/releases/download/v1.0/openai-code-review-sdk-1.0.jar
 
-      - name: Download dynamic-thread-pool-spring-boot-starter JAR
-        run: wget -O ./libs/dynamic-thread-pool-spring-boot-starter-1.0.jar https://github.com/Victorzwx/groupBuy/releases/download/v1/dynamic-thread-pool-spring-boot-starter-1.0.jar
-
-
-      # 步骤3：Maven项目构建
-      - name: Build with Maven
-        run: mvn clean install     # 执行Maven清理和编译打包操作（生成可执行JAR）
-
-      # 步骤4：复制代码评审SDK依赖
-      - name: Copy openai-code-review-sdk JAR
-        run: mvn dependency:copy -Dartifact=plus.gaga.middleware:openai-code-review-sdk:1.0 -DoutputDirectory=./libs
-        # 通过Maven依赖管理复制指定SDK到libs目录（类似网页1中自动下载评审组件的逻辑）
+#      - name: Download dynamic-thread-pool-spring-boot-starter JAR
+#        run: wget -O ./libs/dynamic-thread-pool-spring-boot-starter-1.0.jar https://github.com/Victorzwx/groupBuy/releases/download/v1/dynamic-thread-pool-spring-boot-starter-1.0.jar
+#
+#
+#      # 步骤3：Maven项目构建
+#      - name: Build with Maven
+#        run: mvn clean install     # 执行Maven清理和编译打包操作（生成可执行JAR）
+#
+#      # 步骤4：复制代码评审SDK依赖
+#      - name: Copy openai-code-review-sdk JAR
+#        run: mvn dependency:copy -Dartifact=plus.gaga.middleware:openai-code-review-sdk:1.0 -DoutputDirectory=./libs
+#        # 通过Maven依赖管理复制指定SDK到libs目录（类似网页1中自动下载评审组件的逻辑）
 
       - name: Get repository name
         id: repo-name
