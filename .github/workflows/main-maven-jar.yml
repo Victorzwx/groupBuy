@@ -37,7 +37,7 @@ jobs:
         run: wget -O ./libs/openai-code-review-sdk-1.0.jar https://github.com/Victorzwx/groupBuy/releases/download/v1.0/openai-code-review-sdk-1.0.jar
 
       - name: Download dynamic-thread-pool-spring-boot-starter JAR
-        run: wget -O ./libs/dynamic-thread-pool-spring-boot-starter-1.0.jar https://github.com/Victorzwx/CodeReview/releases/download/v1.0/dynamic-thread-pool-spring-boot-starter-1.0.jar
+        run: wget -O ./libs/dynamic-thread-pool-spring-boot-starter-1.0.jar https://github.com/Victorzwx/groupBuy/releases/download/v1/dynamic-thread-pool-spring-boot-starter-1.0.jar
 
 
       # 步骤3：Maven项目构建
