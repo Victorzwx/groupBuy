@@ -29,6 +29,17 @@ jobs:
           distribution: 'adopt'    # 使用AdoptOpenJDK发行版
           java-version: '8'       # 指定JDK 11版本（需与项目编译要求匹配）
 
+
+      - name: Create libs directory
+        run: mkdir -p ./libs
+
+      - name: Download openai-code-review-sdk JAR
+        run: wget -O ./libs/openai-code-review-sdk-1.0.jar https://github.com/Victorzwx/groupBuy/releases/download/v1.0/openai-code-review-sdk-1.0.jar
+
+      - name: Download dynamic-thread-pool-spring-boot-starter JAR
+        run: wget -O ./libs/dynamic-thread-pool-spring-boot-starter-1.0.jar https://github.com/Victorzwx/CodeReview/releases/download/v1.0/dynamic-thread-pool-spring-boot-starter-1.0.jar
+
+
       # 步骤3：Maven项目构建
       - name: Build with Maven
         run: mvn clean install     # 执行Maven清理和编译打包操作（生成可执行JAR）
